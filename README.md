@@ -9,7 +9,7 @@
 
    <br/> 
    
-🎵 **Offline Music Player** is a mobile application developed with Kotlin for Android, crafted to provide users with an exceptional offline music experience. The app empowers users to organize their favorite tracks, create personalized playlists, adjust sound with a built-in equalizer, and enjoy music anytime without the need for an internet connection. With its intuitive design and rich features, Offline Music Player ensures a seamless and enjoyable musical journey. Made with love ❤️ by [Achraf El masoudi](https://www.linkedin.com/in/achelmasoudi)*
+🎵 **Offline Music Player** is a mobile application developed with Kotlin for Android, crafted to provide users with an exceptional offline music experience. The app empowers users to organize their favorite tracks, create personalized playlists, adjust sound with a built-in equalizer, and enjoy music anytime without the need for an internet connection. With its intuitive design and rich features, Offline Music Player ensures a seamless and enjoyable musical journey. Made with love ❤️ by [Achraf El masoudi](https://www.linkedin.com/in/achelmasoudi)
 
 <br/>
 
@@ -20,10 +20,10 @@
 <h2>Offline Music Player - Your Melodic Universe 🎶✨</h2>
 
 ### 🎧 Unleash Your Music Universe:
-  - Dive into a symphony of features with Offline Music Player. Explore favorites, playlists, sleep timer, equalizer, and more—all within one harmonious app.
+  - Dive into a symphony of features with Offline Music Player. Explore favorites, playlists, sleep timer, equalizer, and more — all within one harmonious app.
 
 ### 📁 Organize Your Melodies:
-  - Curate your musical journey effortlessly. Arrange favorites, craft playlists, and set the perfect ambiance with the sleep timer—all at your fingertips.
+  - Curate your musical journey effortlessly. Arrange favorites, craft playlists, and set the perfect ambiance with the sleep timer — all at your fingertips.
 
 ### 🔈 Immersive Soundscapes:
   - Elevate your auditory experience with our dynamic equalizer and booster. Immerse yourself in rich, resonant sound tailored to your preferences.
