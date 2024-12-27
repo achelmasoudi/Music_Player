@@ -17,21 +17,21 @@
 
 <br/> 
 
-<h2>Offline Music Player - Your Melodic Universe 🎶✨</h2>
+<h3>Offline Music Player - Your Melodic Universe 🎶✨</h3>
 
-### 🎧 Unleash Your Music Universe:
+#### 🎧 Unleash Your Music Universe:
   - Dive into a symphony of features with Offline Music Player. Explore favorites, playlists, sleep timer, equalizer, and more — all within one harmonious app.
 
-### 📁 Organize Your Melodies:
+#### 📁 Organize Your Melodies:
   - Curate your musical journey effortlessly. Arrange favorites, craft playlists, and set the perfect ambiance with the sleep timer — all at your fingertips.
 
-### 🔈 Immersive Soundscapes:
+#### 🔈 Immersive Soundscapes:
   - Elevate your auditory experience with our dynamic equalizer and booster. Immerse yourself in rich, resonant sound tailored to your preferences.
 
-### 🛠️ Empower Your Playlist:
+#### 🛠️ Empower Your Playlist:
   - Take charge of your musical voyage. Customize playlists, fine-tune settings, and set the stage for an unforgettable listening experience.
 
-### 🚀 Soundtrack Your Moments:
+#### 🚀 Soundtrack Your Moments:
   - Let music accompany every moment of your journey. Whether it's a commute, workout, or relaxation session, Offline Music Player ensures your melodies are always within reach.
 
 <br/> 
