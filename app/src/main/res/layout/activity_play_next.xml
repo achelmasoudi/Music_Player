@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_primaryColor_ofApp"
+    tools:context=".activities.PlayNextActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/playNextActivity_toolBarId_relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:background="@color/redColor_ofApp"
+            android:id="@+id/playNextActivity_toolBarId"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_scrollFlags="scroll|snap|enterAlways"
+            app:popupTheme="@style/Theme.MaterialComponents.Light"
+            app:title="@string/playNextActivity_toolBarTitle"
+            app:titleTextAppearance="@style/styleOfToolbar"
+            app:titleTextColor="@color/white" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/playNextActivity_instructionId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:padding="16dp"
+        android:textColor="@color/dark_secondColorOfApp"
+        android:text="@string/playNextActivity_playNextNote"
+        android:textSize="17dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/playNextActivity_recyclerViewId"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_above="@id/playNextActivity_adViewId"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/playNextActivity_toolBarId_relativeLayout"
+        android:scrollbars="vertical" />
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/playNextActivity_adViewId"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        ads:adSize="FULL_BANNER"
+        ads:adUnitId="ca-app-pub-3711142068844225/7524460087" />
+
+</RelativeLayout>

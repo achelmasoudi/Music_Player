@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Music Player</string>
+    <string name="song_name">Şarkı adı</string>
+    <string name="artist">Artist</string>
+
+
+    <!-- Menu -->
+    <string name="settings">Ayarlar</string>
+    <string name="search_view">Arama</string>
+    <string name="music">Müzik</string>
+    <string name="favourite">Favoriler</string>
+    <string name="library">Kitaplık</string>
+
+    <!-- Play Next Activity -->
+    <string name="playNextActivity_toolBarTitle">Sonraki oynat</string>
+    <string name="playNextActivity_playNextNote">Sonraki oynat\'a eklemek için herhangi bir Şarkıya uzun bas.</string>
+
+    <!-- Playlist Details Activity -->
+    <!-- XML -->
+    <string name="playlistDetailsActivity_toolBarTitle">Oynatma Listeleri</string>
+    <string name="playlistDetailsActivity_addSongBtn">Şarkı ekle</string>
+    <string name="playlistDetailsActivity_removeAllBtn">Tümünü kaldır</string>
+    <!-- Kotlin -->
+    <string name="playlistDetailsActivity_Nosongsinplaylist">Oynatma listesinde şarkı yok.</string>
+    <string name="playlistDetailsActivity_remove">Kaldır</string>
+    <string name="playlistDetailsActivity_Doyouwanttoremoveallsongsfromplaylist">Oynatma listesinden tüm şarkıları kaldırmak istiyor musunuz?</string>
+    <string name="playlistDetailsActivity_yes">Evet</string>
+    <string name="playlistDetailsActivity_no">Hayır</string>
+    <string name="playlistDetailsActivity_totalSongs">Toplam Şarkılar :</string>
+
+    <!-- Search Activity -->
+    <string name="searchActivity_searchSong">Şarkı Ara</string>
+    <string name="searchActivity_searchOnYoutube">Youtube\'da şarkı ara</string>
+    <string name="searchActivity_EnterasongtosearchonYouTube">YouTube\'da aramak için bir şarkı gir !</string>
+
+    <!-- Selection Of Songs Activity -->
+    <string name="selectionOfSongsActivity_searchSong">Şarkı Ara</string>
+
+    <!-- Settings Activity -->
+    <!-- XML -->
+    <string name="settingsActivity_toolBarTitle">Ayarlar</string>
+    <string name="settingsActivity_Customize_your_theme">Temanızı özelleştir</string>
+    <string name="settingsActivity_App_language">Uygulama dili</string>
+    <string name="settingsActivity_Rate_our_application">Uygulamamızı değerlendir</string>
+    <string name="settingsActivity_Recommend_our_application">Uygulamamızı öner</string>
+    <string name="settingsActivity_Give_us_your_suggestions">Önerilerini bize bildir</string>
+    <string name="settingsActivity_Report_an_issue">Sorun bildir</string>
+    <string name="settingsActivity_Privacy_policy">Gizlilik politikası</string>
+    <string name="settingsActivity_Buy_me_a_Coffee">Bana bir kahve ısmarla</string>
+    <string name="settingsActivity_Developed_by">Geliştirici</string>
+    <string name="settingsActivity_Achraf_EL_MASOUDI">Achraf EL MASOUDI</string>
+    <string name="settingsActivity_version">Sürüm : 1.0.0</string>
+    <!-- Kotlin -->
+    <string name="settingsActivity_recommendationMessage">Music Player Uygulamasına göz at!\n\Sorunsuz müzik çalma için nihai arkadaşınız. Şık tasarımı ve güçlü özellikleriyle, en sevdiğin şarkıların keyfini sorunsuzca çıkar.\nŞimdi indir ve müzik deneyimini bir üst seviyeye taşı!</string>
+    <string name="settingsActivity_Share_Music_Player_via">Paylaş Music Player via</string>
+    <string name="settingsActivity_emailSubject_Suggestions">Music Player - Önerileri</string>
+    <string name="settingsActivity_emailMessage_Suggestions">Merhaba,\n\nUygulamanız için bazı önerilerim var:\n\n</string>
+    <string name="settingsActivity_emailSubject_ReportingIssue">Music Player - Sorun Bildirme</string>
+    <string name="settingsActivity_emailMessage_ReportingIssue">Merhaba,\n\nUygulamanızda aşağıdaki sorunla karşılaştım:\n\n</string>
+
+    <!-- Songs Of Artist Activity -->
+    <!-- XML -->
+    <string name="songsOfArtistActivity_Shuffle">Karıştır</string>
+    <string name="songsOfArtistActivity_Play_next">Sonraki oynat</string>
+    <!-- Kotlin -->
+    <string name="songsOfArtistActivity_totalSongs">Toplam Şarkılar :</string>
+    <string name="songsOfArtistActivity_Recently_Added">Son Eklenenler</string>
+    <string name="songsOfArtistActivity_Song_Title">Şarkı Adı</string>
+    <string name="songsOfArtistActivity_File_Size">Dosya Boyutu</string>
+    <string name="songsOfArtistActivity_Sorting">Sıralama</string>
+    <string name="songsOfArtistActivity_OK">Tamam</string>
+    <string name="songsOfArtistActivity_Cancel">İptal</string>
+    <string name="songsOfArtistActivity_Unknown">Bilinmiyor</string>
+
+    <!-- Songs Of Folder Activity -->
+    <!-- XML -->
+    <string name="songsOfFolderActivity_Shuffle">Karıştır</string>
+    <string name="songsOfFolderActivity_Play_next">Sonraki oynat</string>
+    <!-- Kotlin -->
+    <string name="songsOfFolderActivity_totalSongs">Toplam Şarkılar :</string>
+    <string name="songsOfFolderActivity_Recently_Added">Son Eklenenler</string>
+    <string name="songsOfFolderActivity_Song_Title">Şarkı Adı</string>
+    <string name="songsOfFolderActivity_File_Size">Dosya Boyutu</string>
+    <string name="songsOfFolderActivity_Sorting">Sıralama</string>
+    <string name="songsOfFolderActivity_OK">Tamam</string>
+    <string name="songsOfFolderActivity_Cancel">İptal</string>
+    <string name="songsOfFolderActivity_Unknown">Bilinmiyor</string>
+
+    <!-- Theme Customization Activity -->
+    <string name="themeCustomizationActivity_toolBarTitle">Temalar</string>
+    <string name="themeCustomizationActivity_Set_favourite_theme">Favori temanı belirle</string>
+    <string name="themeCustomizationActivity_Apply_Btn">Uygula</string>
+
+    <!-- Custom Alert Dialog Of Add Play list -->
+    <string name="customAlertDialogOfAddPlaylist_playListName">Oynatma Listesi Adı</string>
+    <string name="customAlertDialogOfAddPlaylist_cancel">İptal</string>
+    <string name="customAlertDialogOfAddPlaylist_save">Kaydet</string>
+
+    <!-- Bottom Sheet Layout Of More in Music Fragment -->
+    <string name="bottomSheetLayoutOfMore_inMusicFragment_playNext">Sonraki oynat</string>
+    <string name="bottomSheetLayoutOfMore_inMusicFragment_aboutSong">Şarkı hakkında</string>
+    <string name="bottomSheetLayoutOfMore_inMusicFragment_Delete_from_device">Cihazdan sil</string>
+
+    <!-- Bottom Sheet Layout Of More in Playlist -->
+    <string name="bottomSheetLayoutOfMore_inPlaylist_Delete_playlist">Oynatma listesini sil</string>
+
+    <!-- Bottom Sheet Layout Of More in Player Activity -->
+    <string name="bottomSheetLayoutOfMore_inPlayerActivity_Share">Paylaş</string>
+    <string name="bottomSheetLayoutOfMore_inPlayerActivity_Equalizer">Ekolayzer</string>
+    <string name="bottomSheetLayoutOfMore_inPlayerActivity_Booster">Güçlendirici</string>
+
+    <!-- Bottom Sheet Layout Sleep Timer -->
+    <string name="bottomSheetLayoutSleepTimer_Stop_music_after">Sonra müziği durdur</string>
+    <string name="bottomSheetLayoutSleepTimer_5minutes">5 dakika</string>
+    <string name="bottomSheetLayoutSleepTimer_15minutes">15 dakika</string>
+    <string name="bottomSheetLayoutSleepTimer_30_minutes">30 dakika</string>
+    <string name="bottomSheetLayoutSleepTimer_1_hour">1 saat</string>
+
+    <!-- Bottom Sheet Layout Of Song Details -->
+    <string name="bottomSheetLayoutOfSongDetails_Title">Şarkı Adı</string>
+    <string name="bottomSheetLayoutOfSongDetails_Album">Albüm</string>
+    <string name="bottomSheetLayoutOfSongDetails_Artist">Artist</string>
+    <string name="bottomSheetLayoutOfSongDetails_Duration">Süre</string>
+    <string name="bottomSheetLayoutOfSongDetails_Location">Konum</string>
+
+    <!-- Artists Fragment Of Music Fragment -->
+    <string name="artistsFragmentOfMusicFragment_totalArtists">Toplam Artistler :</string>
+    <string name="artistsFragmentOfMusicFragment_No_artists_found">Hiçbir artist bulunamadı !</string>
+
+    <!-- Favourite Fragment -->
+    <string name="favouriteFragment_Favourite_is_empty">Favoriler boştur</string>
+    <string name="favouriteFragment_Songs_you_add_to_favourite_will_appear_here.">Favorilere eklediğin şarkılar burada görünecektir.</string>
+
+    <!-- Folders Fragment Of Fragment Music -->
+    <string name="foldersFragmentOfFragmentMusic_totalFolders">Toplam klasörler :</string>
+    <string name="foldersFragmentOfFragmentMusic_No_folders_found">Hiçbir klasör bulunamadı !</string>
+
+    <!-- Music Fragment -->
+    <string name="musicFragment_Songs">Şarkılar</string>
+    <string name="musicFragment_Folders">Klasörler</string>
+    <string name="musicFragment_Artists">Artistler</string>
+
+    <!-- Playlist Fragment -->
+    <string name="playlistFragment_No_playlists_found">Hiçbir oynatma listesi bulunamadı !</string>
+    <string name="playlistFragment_Tap">Oynatma Listesi Yolculuğunu Başlatmak için</string>
+    <string name="playlistFragment_to_Start_Playlist_Journey">simgesine dokun.</string>
+    <string name="playlistFragment_Please_enter_your_playlist_name">Lütfen oynatma listenin adını gir.</string>
+    <string name="playlistFragment_Playlist_exist">Oynatma listesi zaten mevcut !</string>
+
+    <!-- Songs Fragment Of Music Fragment -->
+    <!-- XML -->
+    <string name="songsFragmentOfMusicFragment_Shuffle">Karıştır</string>
+    <string name="songsFragmentOfMusicFragment_Play_next">Sonraki oynat</string>
+    <!-- Kotlin -->
+    <string name="songsFragmentOfMusicFragment_totalSongs">Toplam Şarkılar :</string>
+    <string name="songsFragmentOfMusicFragment_Recently_Added">Son Eklenenler</string>
+    <string name="songsFragmentOfMusicFragment_Song_Title">Şarkı Adı</string>
+    <string name="songsFragmentOfMusicFragment_File_Size">Dosya Boyutu</string>
+    <string name="songsFragmentOfMusicFragment_Sorting">Sıralama</string>
+    <string name="songsFragmentOfMusicFragment_OK">Tamam</string>
+    <string name="songsFragmentOfMusicFragment_Cancel">İptal</string>
+    <string name="songsFragmentOfMusicFragment_Unknown">Bilinmiyor</string>
+
+    <!-- Player Activity -->
+    <!-- XML -->
+    <string name="playerActivity_toolBarTitle">Şimdi çalıyor</string>
+    <string name="playerActivity_songName">Şarkı Adı</string>
+    <string name="playerActivity_unknown">Bilinmiyor</string>
+    <string name="playerActivity_timeStamp">00:00</string>
+    <!-- Kotlin -->
+    <string name="playerActivity_stopTimer">Durdurma Zamanlayıcısı</string>
+    <string name="playerActivity_Doyou_want_tostop_timer">Zamanlayıcıyı durdurmak ister misin?</string>
+    <string name="playerActivity_Yes">Evet</string>
+    <string name="playerActivity_No">Hayır</string>
+    <string name="playerActivity_SharingMusicFile">Müzik dosyası paylaşımı !</string>
+    <string name="playerActivity_EqualizerFeature_not_Supported">Ekolayzer özelliği desteklenmiyor !</string>
+    <string name="playerActivity_Ok">Tamam</string>
+    <string name="playerActivity_Stop_after_5minutes">Müzik 5 dakika sonra duracaktır !</string>
+    <string name="playerActivity_Stop_after_15minutes">Müzik 15 dakika sonra duracaktır !</string>
+    <string name="playerActivity_Stop_after_30minutes">Müzik 30 dakika sonra duracaktır !</string>
+    <string name="playerActivity_Stop_after_1hour">Müzik 1 saat sonra duracaktır !</string>
+    <string name="playerActivity_AudioBoost">Ses Güçlendirme</string>
+
+    <!-- Bottom Sheet Layout Of Languages -->
+    <string name="bottomSheetLayoutOfLanguages_Application_language">Uygulama dili</string>
+    <string name="bottomSheetLayoutOfLanguages_English">İngilizce</string>
+    <string name="bottomSheetLayoutOfLanguages_Turkish">Türkçe</string>
+    <string name="bottomSheetLayoutOfLanguages_French">Fransızca</string>
+    <string name="bottomSheetLayoutOfLanguages_German">Almanca</string>
+    <string name="bottomSheetLayoutOfLanguages_Russian">Rusça</string>
+    <string name="bottomSheetLayoutOfLanguages_Spanish">İspanyolca</string>
+
+    <!-- Artist Adapter -->
+    <string name="artistAdapter_songs">şarkılar</string>
+
+    <!-- Favourite Adapter -->
+    <string name="favouriteAdapter_Remove_from_playNext">Sonraki oynat\'tan kaldır</string>
+    <string name="favouriteAdapter_Cant_remove_currently_playing_Song">Şu anda çalan Şarkı kaldırılamıyor.</string>
+
+    <!-- Music Adapter -->
+    <string name="musicAdapter_Added_to_play_next">Sonraki oynat\'a eklendi</string>
+    <string name="musicAdapter_Play_the_song_first">İlk önce şarkıyı çal !</string>
+    <string name="musicAdapter_Delete_Song">Şarkıyı Sil</string>
+    <string name="musicAdapter_Are_youSure_you_want_to_deleteSong">Bu şarkıyı silmek istediğinden emin misin ?</string>
+    <string name="musicAdapter_Delete">Sil</string>
+    <string name="musicAdapter_Song_deleted_from_your_device">Şarkı cihazınızdan başarıyla silindi.</string>
+    <string name="musicAdapter_Failed_to_deleteSong">Şarkı silinemedi.</string>
+    <string name="musicAdapter_Cancel">İptal</string>
+
+    <!-- Playlist Adapter -->
+    <string name="playlistAdapter_Do_you_want_to_delete_playlist">Bu oynatma listesini silmek istiyor musun ?</string>
+    <string name="playlistAdapter_Yes">Evet</string>
+    <string name="playlistAdapter_No">Hayır</string>
+
+    <!-- Rating Manager -->
+    <string name="ratingManager_Review_failed_to_start">Değerlendirme başlatılamadı</string>
+    <string name="ratingManager_Rating_is_completed">Değerlendirme tamamlandı.</string>
+</resources>

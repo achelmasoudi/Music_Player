@@ -1,0 +1,136 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <!-- Default theme ( Red ) -->
+    <style name="Base.Theme.MusicPlayer" parent="Theme.Material3.Dark.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/redColor_ofApp</item>
+        <item name="colorPrimaryVariant">@color/redLightColor_ofApp</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Primary brand color. -->
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- for the bar that is above Toollbar -->
+        <item name="android:statusBarColor">@color/redColor_ofApp</item>
+        <!-- for the color of the bar that is below the bottom navigation -->
+        <item name="android:navigationBarColor">@color/dark_primaryColor_ofApp</item>
+    </style>
+
+    <!-- Green Theme -->
+    <style name="greenTheme" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/greenColor_ofApp</item>
+        <item name="colorPrimaryVariant">@color/greenLightColor_ofApp</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:statusBarColor">@color/greenColor_ofApp</item>
+        <item name="android:navigationBarColor">@color/dark_primaryColor_ofApp</item>
+    </style>
+
+    <!-- Blue Theme -->
+    <style name="blueTheme" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/blueColor_ofApp</item>
+        <item name="colorPrimaryVariant">@color/blueLightColor_ofApp</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:statusBarColor">@color/blueColor_ofApp</item>
+        <item name="android:navigationBarColor">@color/dark_primaryColor_ofApp</item>
+    </style>
+
+    <!-- Purple Theme -->
+    <style name="purpleTheme" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/purpleColor_ofApp</item>
+        <item name="colorPrimaryVariant">@color/purpleLightColor_ofApp</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:statusBarColor">@color/purpleColor_ofApp</item>
+        <item name="android:navigationBarColor">@color/dark_primaryColor_ofApp</item>
+    </style>
+
+    <!-- Red 2 Theme -->
+    <style name="red2Theme" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/red2Color_ofApp</item>
+        <item name="colorPrimaryVariant">@color/red2LightColor_ofApp</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:statusBarColor">@color/red2Color_ofApp</item>
+        <item name="android:navigationBarColor">@color/dark_primaryColor_ofApp</item>
+    </style>
+
+    <!-- Pink Theme -->
+    <style name="pinkTheme" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/pinkColor_ofApp</item>
+        <item name="colorPrimaryVariant">@color/pinkLightColor_ofApp</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:statusBarColor">@color/pinkColor_ofApp</item>
+        <item name="android:navigationBarColor">@color/dark_primaryColor_ofApp</item>
+    </style>
+
+    <!-- Orange Theme -->
+    <style name="orangeTheme" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/orangeColor_ofApp</item>
+        <item name="colorPrimaryVariant">@color/orangeLightColor_ofApp</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:statusBarColor">@color/orangeColor_ofApp</item>
+        <item name="android:navigationBarColor">@color/dark_primaryColor_ofApp</item>
+    </style>
+
+    <!-- Gold Theme -->
+    <style name="goldTheme" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/goldColor_ofApp</item>
+        <item name="colorPrimaryVariant">@color/goldLightColor_ofApp</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:statusBarColor">@color/goldColor_ofApp</item>
+        <item name="android:navigationBarColor">@color/dark_primaryColor_ofApp</item>
+    </style>
+
+    <!-- Copper Theme -->
+    <style name="copperTheme" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/copperColor_ofApp</item>
+        <item name="colorPrimaryVariant">@color/copperLightColor_ofApp</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="android:statusBarColor">@color/copperColor_ofApp</item>
+        <item name="android:navigationBarColor">@color/dark_primaryColor_ofApp</item>
+    </style>
+
+    <!--    The Splash Screen Theme -->
+    <style name="TheSplashScreen_Style" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:statusBarColor">@color/dark_primaryColor_ofApp</item>
+    </style>
+
+    <!-- Ripple color when click on a view -->
+    <style name="SelectableItemTheme">
+        <item name="colorControlHighlight">#2043B654</item>
+    </style>
+    <style name="SelectableItemBackground">
+        <item name="android:theme">@style/SelectableItemTheme</item>
+        <item name="android:background">?attr/selectableItemBackground</item>
+    </style>
+
+    <!-- Bottom Sheet Dialog Style -->
+    <style name="BottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/BottomSheetStyle</item>
+    </style>
+    <style name="BottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <!-- TabLayout Text Small Case -->
+    <style name="CustomTextAppearanceTab" parent="TextAppearance.Design.Tab">
+        <item name="textAllCaps">false</item>
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/kollektif</item>
+    </style>
+
+    <!-- Style of Toolbar-->
+    <style name="styleOfToolbar" >
+        <item name="android:textSize">21sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">@font/kollektif</item>
+        <item name="singleLine">true</item>
+    </style>
+
+</resources>

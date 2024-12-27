@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomSheetLayoutOfLanguages_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bottom_sheet_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/bar_bottom_sheet_icon" />
+
+        <TextView
+            android:text="@string/bottomSheetLayoutOfLanguages_Application_language"
+            android:gravity="center"
+            android:fontFamily="@font/kollektif"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.05dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:background="@color/dark_secondColorOfApp" />
+
+        <RadioGroup
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RadioButton
+                android:id="@+id/bottomSheetLayoutOfLanguages_EnglishBtn"
+                android:text="@string/bottomSheetLayoutOfLanguages_English"
+                android:paddingLeft="5dp"
+                android:textColor="@color/dark_secondColorOfApp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <RadioButton
+                android:id="@+id/bottomSheetLayoutOfLanguages_TurkishBtn"
+                android:layout_marginTop="5dp"
+                android:text="@string/bottomSheetLayoutOfLanguages_Turkish"
+                android:paddingLeft="5dp"
+                android:textColor="@color/dark_secondColorOfApp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <RadioButton
+                android:id="@+id/bottomSheetLayoutOfLanguages_FrenchBtn"
+                android:text="@string/bottomSheetLayoutOfLanguages_French"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/dark_secondColorOfApp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <RadioButton
+                android:id="@+id/bottomSheetLayoutOfLanguages_GermanBtn"
+                android:text="@string/bottomSheetLayoutOfLanguages_German"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/dark_secondColorOfApp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <RadioButton
+                android:id="@+id/bottomSheetLayoutOfLanguages_RussianBtn"
+                android:text="@string/bottomSheetLayoutOfLanguages_Russian"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/dark_secondColorOfApp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <RadioButton
+                android:id="@+id/bottomSheetLayoutOfLanguages_SpanishBtn"
+                android:text="@string/bottomSheetLayoutOfLanguages_Spanish"
+                android:paddingLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/dark_secondColorOfApp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+</RelativeLayout>

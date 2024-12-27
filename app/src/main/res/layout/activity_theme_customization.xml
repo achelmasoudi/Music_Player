@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_primaryColor_ofApp"
+    tools:context=".activities.ThemeCustomizationActivity">
+
+    <RelativeLayout
+        android:id="@+id/themeCustomizationActivity_toolBarId_relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/themeCustomizationActivity_toolBarId"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/redColor_ofApp"
+            app:layout_scrollFlags="scroll|snap|enterAlways"
+            app:popupTheme="@style/Theme.MaterialComponents.Light"
+            app:title="@string/themeCustomizationActivity_toolBarTitle"
+            app:titleTextAppearance="@style/styleOfToolbar"
+            app:titleTextColor="@color/white" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/themeCustomizationActivity_textViewId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/themeCustomizationActivity_toolBarId_relativeLayout"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginRight="30dp"
+        android:text="@string/themeCustomizationActivity_Set_favourite_theme"
+        android:textColor="@color/dark_secondColorOfApp"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/themeCustomizationActivity_textViewId"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/themeCustomizationActivity_defaultThemeBtnId"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1">
+
+                <View
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/background_of_default_theme" />
+
+                <ImageView
+                    android:id="@+id/themeCustomizationActivity_defaultTheme_checkedIconId"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/checked_theme_icon"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/themeCustomizationActivity_theme_1_BtnId"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1">
+
+                <View
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/background_of_1_theme" />
+
+                <ImageView
+                    android:id="@+id/themeCustomizationActivity_theme_1_checkedIconId"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/checked_theme_icon"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/themeCustomizationActivity_theme_2_BtnId"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_weight="1">
+
+                <View
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/background_of_2_theme" />
+
+                <ImageView
+                    android:id="@+id/themeCustomizationActivity_theme_2_checkedIconId"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/checked_theme_icon"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/themeCustomizationActivity_theme_3_BtnId"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1">
+
+                <View
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/background_of_3_theme" />
+
+                <ImageView
+                    android:id="@+id/themeCustomizationActivity_theme_3_checkedIconId"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/checked_theme_icon"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/themeCustomizationActivity_theme_4_BtnId"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1">
+
+                <View
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/background_of_4_theme" />
+
+                <ImageView
+                    android:id="@+id/themeCustomizationActivity_theme_4_checkedIconId"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/checked_theme_icon"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/themeCustomizationActivity_theme_5_BtnId"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_weight="1">
+
+                <View
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/background_of_8_theme" />
+
+                <ImageView
+                    android:id="@+id/themeCustomizationActivity_theme_5_checkedIconId"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/checked_theme_icon"
+                    android:visibility="gone" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/themeCustomizationActivity_theme_6_BtnId"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1">
+
+                <View
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/background_of_6_theme" />
+
+                <ImageView
+                    android:id="@+id/themeCustomizationActivity_theme_6_checkedIconId"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/checked_theme_icon"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/themeCustomizationActivity_theme_7_BtnId"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="1">
+
+                <View
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/background_of_7_theme" />
+
+                <ImageView
+                    android:id="@+id/themeCustomizationActivity_theme_7_checkedIconId"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/checked_theme_icon"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/themeCustomizationActivity_theme_8_BtnId"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_weight="1">
+
+                <View
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/background_of_5_theme" />
+
+                <ImageView
+                    android:id="@+id/themeCustomizationActivity_theme_8_checkedIconId"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/checked_theme_icon"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/themeCustomizationActivity_applyBtnId"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginBottom="40dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/redColor_ofApp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="0dp"
+        app:cardMaxElevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="@string/themeCustomizationActivity_Apply_Btn"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

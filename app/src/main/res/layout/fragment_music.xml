@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/musicFragment_coordinatorLayout_rootId"
+    android:layout_height="match_parent"
+    android:background="@color/dark_primaryColor_ofApp">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/musicFragment_toolBarId"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:layout_scrollFlags="scroll|snap|enterAlways"
+            app:popupTheme="@style/Theme.MaterialComponents.Light"
+            app:title="@string/app_name"
+            android:background="@color/redColor_ofApp"
+            app:titleTextAppearance="@style/styleOfToolbar"
+            app:titleTextColor="@color/white" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.google.android.material.tabs.TabLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/musicFragment_tablayoutId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_primaryColor_ofApp"
+            app:tabGravity="fill"
+            app:tabIndicatorAnimationMode="elastic"
+            app:tabIndicatorColor="@color/redColor_ofApp"
+            app:tabIndicatorFullWidth="false"
+            app:tabIndicatorHeight="3dp"
+            app:tabInlineLabel="true"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/redColor_ofApp"
+            app:tabTextAppearance="@style/CustomTextAppearanceTab"
+            app:tabTextColor="@color/dark_secondColorOfApp" />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/musicFragment_viewPagerId"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/musicFragment_tablayoutId"
+            android:background="@color/dark_primaryColor_ofApp"
+            />
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/dark_primaryColor_ofApp"
+    android:layout_height="match_parent"
+    tools:context=".activities.SelectionOfSongsActivity">
+
+    <LinearLayout
+        android:id="@+id/selectionActivity_linearLayoutId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/selectionActivity_arrowBackId"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="#00000000"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="0dp"
+            app:cardMaxElevation="0dp">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_gravity="center"
+                android:src="@drawable/arrow_back"
+                tools:ignore="ContentDescription" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/selectionActivity_searchViewId"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/custom_search_view"
+            android:focusable="true"
+            app:closeIcon="@drawable/close_icon_for_search_icon"
+            app:iconifiedByDefault="false"
+            app:queryHint="@string/selectionOfSongsActivity_searchSong"
+            app:searchIcon="@drawable/search_icon" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/selectionActivity_LinearLayout_ViewOfToolBarId"
+        android:background="#000000"
+        android:layout_below="@+id/selectionActivity_linearLayoutId"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="0.2dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/selectionActivity_recyclerViewId"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/selectionActivity_LinearLayout_ViewOfToolBarId"
+        android:layout_height="match_parent"
+        android:layout_above="@id/selectionActivity_adViewId"
+        android:layout_marginTop="10dp"
+        android:scrollbars="vertical" />
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/selectionActivity_adViewId"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        ads:adSize="FULL_BANNER"
+        ads:adUnitId="ca-app-pub-3711142068844225/7524460087" />
+
+</RelativeLayout>

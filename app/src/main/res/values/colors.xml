@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="dark_primaryColor_ofApp">#191C20</color>
+    <color name="dark_cardView">#2A292F</color>
+    <color name="dark_secondColorOfApp">#BEBEBE</color>
+    <color name="color_of_dialog">#2A292F</color>
+
+    <!--    EF6D39 ,00E7F0 , Orange FF7F11 -->
+
+    <!-- Red - Default theme -->
+    <color name="redColor_ofApp">#D32D53</color>
+    <color name="redLightColor_ofApp">#AE2B49</color>
+    <color name="color_backgroundIcon">#0DD32D53</color>
+    <color name="color_of_playerActivity">#90D32D53</color>
+
+    <!-- Green - 1. theme -->
+    <color name="greenColor_ofApp">#12C64B</color>
+    <color name="greenLightColor_ofApp">#43B654</color>
+    <color name="greenColor_backgroundIcon">#0D12C64B</color>
+    <color name="greenColor_of_playerActivity">#8F12C64B</color>
+
+    <!-- Blue - 2. theme -->
+    <color name="blueColor_ofApp">#006DF0</color>
+    <color name="blueLightColor_ofApp">#2360AA</color>
+    <color name="blueColor_backgroundIcon">#0D006DF0</color>
+    <color name="blueColor_of_playerActivity">#92006DF0</color>
+
+    <!-- Purple - 3. theme -->
+    <color name="purpleColor_ofApp">#9000DC</color>
+    <color name="purpleLightColor_ofApp">#662D8C</color>
+    <color name="purpleColor_backgroundIcon">#0D9000DC</color>
+    <color name="purpleColor_of_playerActivity">#929000DC</color>
+
+    <!-- Red2 - 4. theme -->
+    <color name="red2Color_ofApp">#FF0000</color>
+    <color name="red2LightColor_ofApp">#D31B1B</color>
+    <color name="red2Color_backgroundIcon">#0DFF0000</color>
+    <color name="red2Color_of_playerActivity">#95FF0000</color>
+
+    <!-- Pink - 5. theme -->
+    <color name="pinkColor_ofApp">#ED1E79</color>
+    <color name="pinkLightColor_ofApp">#CC1766</color>
+    <color name="pinkColor_backgroundIcon">#0CED1E79</color>
+    <color name="pinkColor_of_playerActivity">#95ED1E79</color>
+
+    <!-- Orange - 6. theme -->
+    <color name="orangeColor_ofApp">#FF7600</color>
+    <color name="orangeLightColor_ofApp">#EF6D39</color>
+    <color name="orangeColor_backgroundIcon">#0CFF7600</color>
+    <color name="orangeColor_of_playerActivity">#94FF7600</color>
+
+    <!-- Gold - 7. theme -->
+    <color name="goldColor_ofApp">#E5B80B</color>
+    <color name="goldLightColor_ofApp">#FFD700</color>
+    <color name="goldColor_backgroundIcon">#0DE5B80B</color>
+    <color name="goldColor_of_playerActivity">#95E5B80B</color>
+
+    <!-- Copper - 8. theme -->
+    <color name="copperColor_ofApp">#D5750A</color>
+    <color name="copperLightColor_ofApp">#AC4F00</color>
+    <color name="copperColor_backgroundIcon">#0DD5750A</color>
+    <color name="copperColor_of_playerActivity">#95D5750A</color>
+</resources>

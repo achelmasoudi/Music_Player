@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/searchActivity_rootId"
+    android:background="@color/dark_primaryColor_ofApp"
+    tools:context=".activities.SearchActivity">
+
+    <LinearLayout
+        android:id="@+id/searchActivity_linearLayoutId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/searchActivity_arrowBackId"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="#00000000"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="0dp"
+            app:cardMaxElevation="0dp">
+
+            <ImageView
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:layout_gravity="center"
+                android:src="@drawable/arrow_back"
+                tools:ignore="ContentDescription" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchActivity_searchViewId"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/custom_search_view"
+            android:focusable="true"
+            app:closeIcon="@drawable/close_icon_for_search_icon"
+            app:iconifiedByDefault="false"
+            app:queryHint="@string/searchActivity_searchSong"
+            app:searchIcon="@drawable/search_icon" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/searchActivity_LinearLayout_ViewOfToolBarId"
+        android:background="#000000"
+        android:layout_below="@+id/searchActivity_linearLayoutId"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="0.2dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/searchActivity_searchOnYoutube_BtnId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/searchActivity_LinearLayout_ViewOfToolBarId"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardBackgroundColor="#2A292F"
+        app:cardCornerRadius="20dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="35dp"
+                android:src="@drawable/youtube_icon" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:textSize="14sp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:text="@string/searchActivity_searchOnYoutube"
+                android:textColor="@color/dark_secondColorOfApp"
+                />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <ImageView
+                    android:src="@drawable/forward_icon"
+                    android:layout_centerVertical="true"
+                    android:layout_width="18dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_height="18dp"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/searchActivity_recyclerViewId"
+        android:layout_width="match_parent"
+        android:layout_above="@id/searchActivity_adViewId"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/searchActivity_searchOnYoutube_BtnId"
+        android:scrollbars="vertical" />
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/searchActivity_adViewId"
+        android:layout_width="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        ads:adSize="FULL_BANNER"
+        ads:adUnitId="ca-app-pub-3711142068844225/7524460087" />
+
+
+</RelativeLayout>

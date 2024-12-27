@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_primaryColor_ofApp"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/favouriteFragment_toolBar_relativeLayoutId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.Toolbar
+                android:background="@color/redColor_ofApp"
+                android:id="@+id/favouriteFragment_toolBarId"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:layout_scrollFlags="scroll|snap|enterAlways"
+                app:popupTheme="@style/Theme.MaterialComponents.Light"
+                app:title="@string/app_name"
+                app:titleTextAppearance="@style/styleOfToolbar"
+                app:titleTextColor="@color/white" />
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/favouriteFragment_recyclerViewId"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_below="@id/favouriteFragment_toolBar_relativeLayoutId" />
+
+        <LinearLayout
+            android:id="@+id/favouriteFragment_instructionId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="180dp"
+                android:layout_height="180dp"
+                android:src="@drawable/favorite_empty_icon" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/favouriteFragment_Favourite_is_empty"
+                android:textColor="#F0F3F8"
+                android:textSize="19dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@string/favouriteFragment_Songs_you_add_to_favourite_will_appear_here."
+                android:textColor="#BEBEBE"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/favouriteFragment_shuffleBtnId"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="30dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardBackgroundColor="@color/redColor_ofApp"
+            android:layout_marginBottom="30dp"
+            android:layout_width="52dp"
+            app:cardCornerRadius="7dp"
+            android:layout_height="52dp">
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@drawable/shuffle_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"/>
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</LinearLayout>

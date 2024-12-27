@@ -1,0 +1,10 @@
+<!-- music_icon_for_song_red.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="512dp"
+    android:height="512dp"
+    android:viewportWidth="32"
+    android:viewportHeight="32">
+  <path
+      android:pathData="M27.33,3.64a17.555,17.555 0,0 1,-9.035 -2.503l-0.734,-0.44A1.03,1.03 0,0 0,16 1.58l0,17.624A7.203,7.203 135,1 0,18.06 24.24L18.06,9.552A19.625,19.625 135,0 0,27.33 11.88a1.03,1.03 0,0 0,1.03 -1.03L28.36,4.67a1.03,1.03 0,0 0,-1.03 -1.03z"
+      android:fillColor="@color/redColor_ofApp"/>
+</vector>

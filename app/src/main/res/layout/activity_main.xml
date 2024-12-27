@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/dark_primaryColor_ofApp"
+    tools:context=".activities.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fragment_containerId"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/mainActivity_nowPlayingFragmentId" />
+
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/mainActivity_nowPlayingFragmentId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/mainActivity_adViewId"
+        android:name="com.achelm.musicplayer.fragments.NowPlayingFragment"
+        tools:layout="@layout/fragment_now_playing" />
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/mainActivity_adViewId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/MainActivity_BottomNavigationViewId"
+        android:layout_centerHorizontal="true"
+        ads:adSize="FULL_BANNER"
+        ads:adUnitId="ca-app-pub-3711142068844225/7524460087" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/MainActivity_BottomNavigationViewId"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        app:itemIconSize="22dp"
+        app:itemActiveIndicatorStyle="@color/white"
+        app:itemPaddingTop="10dp"
+        app:itemPaddingBottom="10dp"
+        app:itemIconTint="@drawable/bottom_nav_item_colors"
+        app:itemTextColor="@drawable/bottom_nav_item_colors"
+        android:background="@color/dark_primaryColor_ofApp"
+        android:layout_alignParentBottom="true"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_menu" />
+
+
+</RelativeLayout>

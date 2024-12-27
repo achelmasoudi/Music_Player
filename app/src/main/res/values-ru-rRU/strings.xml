@@ -1,0 +1,190 @@
+<resources>
+    <string name="app_name">Music Player</string>
+    <string name="song_name">Название песни</string>
+    <string name="artist">Исполнитель</string>
+
+    <string name="settings">Настройки</string>
+    <string name="search_view">Поиск</string>
+    <string name="music">Музыка</string>
+    <string name="favourite">Избранное</string>
+    <string name="library">Библиотека</string>
+
+    <string name="playNextActivity_toolBarTitle">Воспроизвести далее</string>
+    <string name="playNextActivity_playNextNote">Удерживайте палец на любой песне, чтобы добавить ее в воспроизведение далее.</string>
+
+    <!-- XML -->
+    <string name="playlistDetailsActivity_toolBarTitle">Плейлисты</string>
+    <string name="playlistDetailsActivity_addSongBtn">Добавить песню</string>
+    <string name="playlistDetailsActivity_removeAllBtn">Удалить все</string>
+    <!-- Kotlin -->
+    <string name="playlistDetailsActivity_Nosongsinplaylist">Нет песен в плейлисте.</string>
+    <string name="playlistDetailsActivity_remove">Удалить</string>
+    <string name="playlistDetailsActivity_Doyouwanttoremoveallsongsfromplaylist">Вы уверены, что хотите удалить все песни из плейлиста?</string>
+    <string name="playlistDetailsActivity_yes">Да</string>
+    <string name="playlistDetailsActivity_no">Нет</string>
+    <string name="playlistDetailsActivity_totalSongs">Всего песен:</string>
+
+    <string name="searchActivity_searchSong">Поиск песни</string>
+    <string name="searchActivity_searchOnYoutube">Искать песни на YouTube</string>
+    <string name="searchActivity_EnterasongtosearchonYouTube">Введите песню для поиска на YouTube!</string>
+
+    <string name="selectionOfSongsActivity_searchSong">Поиск песни</string>
+
+    <!-- XML -->
+    <string name="settingsActivity_toolBarTitle">Настройки</string>
+    <string name="settingsActivity_Customize_your_theme">Настройка темы</string>
+    <string name="settingsActivity_App_language">Язык приложения</string>
+    <string name="settingsActivity_Rate_our_application">Оценить наше приложение</string>
+    <string name="settingsActivity_Recommend_our_application">Рекомендовать наше приложение</string>
+    <string name="settingsActivity_Give_us_your_suggestions">Дайте нам свои предложения</string>
+    <string name="settingsActivity_Report_an_issue">Сообщить о проблеме</string>
+    <string name="settingsActivity_Privacy_policy">Политика конфиденциальности</string>
+    <string name="settingsActivity_Buy_me_a_Coffee">Купите мне кофе</string>
+    <string name="settingsActivity_Developed_by">Разработано</string>
+    <string name="settingsActivity_Achraf_EL_MASOUDI">Ашраф Эль Масуди</string>
+    <string name="settingsActivity_version">Версия: 1.0.0</string>
+    <!-- Kotlin -->
+    <string name="settingsActivity_recommendationMessage">Проверьте приложение Музыкальный плеер!\n\nВаш идеальный компаньон для бесперебойного воспроизведения музыки. Наслаждайтесь вашими любимыми мелодиями без проблем благодаря его элегантному дизайну и мощным функциям.\nСкачайте сейчас и поднимите свой музыкальный опыт на новый уровень!</string>
+    <string name="settingsActivity_Share_Music_Player_via">Поделиться Музыкальным плеером через</string>
+    <string name="settingsActivity_emailSubject_Suggestions">Музыкальный плеер - Предложения</string>
+    <string name="settingsActivity_emailMessage_Suggestions">Привет,\n\nУ меня есть несколько предложений по вашему приложению:\n\n</string>
+    <string name="settingsActivity_emailSubject_ReportingIssue">Музыкальный плеер - Сообщение о проблеме</string>
+    <string name="settingsActivity_emailMessage_ReportingIssue">Привет,\n\nУ меня возникла следующая проблема с вашим приложением:\n\n</string>
+
+    <!-- XML -->
+    <string name="songsOfArtistActivity_Shuffle">Перемешать</string>
+    <string name="songsOfArtistActivity_Play_next">Воспроизвести далее</string>
+    <!-- Kotlin -->
+    <string name="songsOfArtistActivity_totalSongs">Всего песен:</string>
+    <string name="songsOfArtistActivity_Recently_Added">Недавно добавленные</string>
+    <string name="songsOfArtistActivity_Song_Title">Название песни</string>
+    <string name="songsOfArtistActivity_File_Size">Размер файла</string>
+    <string name="songsOfArtistActivity_Sorting">Сортировка</string>
+    <string name="songsOfArtistActivity_OK">OK</string>
+    <string name="songsOfArtistActivity_Cancel">Отмена</string>
+    <string name="songsOfArtistActivity_Unknown">Неизвестно</string>
+
+    <!-- XML -->
+    <string name="songsOfFolderActivity_Shuffle">Перемешать</string>
+    <string name="songsOfFolderActivity_Play_next">Воспроизвести далее</string>
+    <!-- Kotlin -->
+    <string name="songsOfFolderActivity_totalSongs">Всего песен:</string>
+    <string name="songsOfFolderActivity_Recently_Added">Недавно добавленные</string>
+    <string name="songsOfFolderActivity_Song_Title">Название песни</string>
+    <string name="songsOfFolderActivity_File_Size">Размер файла</string>
+    <string name="songsOfFolderActivity_Sorting">Сортировка</string>
+    <string name="songsOfFolderActivity_OK">OK</string>
+    <string name="songsOfFolderActivity_Cancel">Отмена</string>
+    <string name="songsOfFolderActivity_Unknown">Неизвестно</string>
+
+    <string name="themeCustomizationActivity_toolBarTitle">Темы</string>
+    <string name="themeCustomizationActivity_Set_favourite_theme">Установить вашу любимую тему</string>
+    <string name="themeCustomizationActivity_Apply_Btn">Применить</string>
+
+    <string name="customAlertDialogOfAddPlaylist_playListName">Название плейлиста</string>
+    <string name="customAlertDialogOfAddPlaylist_cancel">Отмена</string>
+    <string name="customAlertDialogOfAddPlaylist_save">Сохранить</string>
+
+    <string name="bottomSheetLayoutOfMore_inMusicFragment_playNext">Воспроизвести далее</string>
+    <string name="bottomSheetLayoutOfMore_inMusicFragment_aboutSong">О песне</string>
+    <string name="bottomSheetLayoutOfMore_inMusicFragment_Delete_from_device">Удалить с устройства</string>
+
+    <string name="bottomSheetLayoutOfMore_inPlaylist_Delete_playlist">Удалить плейлист</string>
+
+    <string name="bottomSheetLayoutOfMore_inPlayerActivity_Share">Поделиться</string>
+    <string name="bottomSheetLayoutOfMore_inPlayerActivity_Equalizer">Эквалайзер</string>
+    <string name="bottomSheetLayoutOfMore_inPlayerActivity_Booster">Усилитель</string>
+
+    <string name="bottomSheetLayoutSleepTimer_Stop_music_after">Остановить музыку после</string>
+    <string name="bottomSheetLayoutSleepTimer_5minutes">5 минут</string>
+    <string name="bottomSheetLayoutSleepTimer_15minutes">15 минут</string>
+    <string name="bottomSheetLayoutSleepTimer_30_minutes">30 минут</string>
+    <string name="bottomSheetLayoutSleepTimer_1_hour">1 час</string>
+
+    <string name="bottomSheetLayoutOfSongDetails_Title">Название</string>
+    <string name="bottomSheetLayoutOfSongDetails_Album">Альбом</string>
+    <string name="bottomSheetLayoutOfSongDetails_Artist">Исполнитель</string>
+    <string name="bottomSheetLayoutOfSongDetails_Duration">Продолжительность</string>
+    <string name="bottomSheetLayoutOfSongDetails_Location">Местоположение</string>
+
+    <string name="artistsFragmentOfMusicFragment_totalArtists">Всего артистов:</string>
+    <string name="artistsFragmentOfMusicFragment_No_artists_found">Артисты не найдены!</string>
+
+    <string name="favouriteFragment_Favourite_is_empty">Избранное пусто</string>
+    <string name="favouriteFragment_Songs_you_add_to_favourite_will_appear_here.">Песни, которые вы добавили в избранное, появятся здесь.</string>
+
+    <string name="foldersFragmentOfFragmentMusic_totalFolders">Всего папок:</string>
+    <string name="foldersFragmentOfFragmentMusic_No_folders_found">Папки не найдены!</string>
+
+    <string name="musicFragment_Songs">Песни</string>
+    <string name="musicFragment_Folders">Папки</string>
+    <string name="musicFragment_Artists">Артисты</string>
+
+    <string name="playlistFragment_No_playlists_found">Плейлисты не найдены!</string>
+    <string name="playlistFragment_Tap">Коснитесь</string>
+    <string name="playlistFragment_to_Start_Playlist_Journey">чтобы начать ваш плейлистовый путь.</string>
+    <string name="playlistFragment_Please_enter_your_playlist_name">Пожалуйста, введите название вашего плейлиста.</string>
+    <string name="playlistFragment_Playlist_exist">Плейлист уже существует!</string>
+
+    <!-- XML -->
+    <string name="songsFragmentOfMusicFragment_Shuffle">Перемешать</string>
+    <string name="songsFragmentOfMusicFragment_Play_next">Воспроизвести далее</string>
+    <!-- Kotlin -->
+    <string name="songsFragmentOfMusicFragment_totalSongs">Всего песен:</string>
+    <string name="songsFragmentOfMusicFragment_Recently_Added">Недавно добавленные</string>
+    <string name="songsFragmentOfMusicFragment_Song_Title">Название песни</string>
+    <string name="songsFragmentOfMusicFragment_File_Size">Размер файла</string>
+    <string name="songsFragmentOfMusicFragment_Sorting">Сортировка</string>
+    <string name="songsFragmentOfMusicFragment_OK">OK</string>
+    <string name="songsFragmentOfMusicFragment_Cancel">Отмена</string>
+    <string name="songsFragmentOfMusicFragment_Unknown">Неизвестно</string>
+
+    <!-- XML -->
+    <string name="playerActivity_toolBarTitle">Сейчас играет</string>
+    <string name="playerActivity_songName">Название песни</string>
+    <string name="playerActivity_unknown">Неизвестно</string>
+    <string name="playerActivity_timeStamp">00:00</string>
+    <!-- Kotlin -->
+    <string name="playerActivity_stopTimer">Остановить таймер</string>
+    <string name="playerActivity_Doyou_want_tostop_timer">Хотите остановить таймер?</string>
+    <string name="playerActivity_Yes">Да</string>
+    <string name="playerActivity_No">Нет</string>
+    <string name="playerActivity_SharingMusicFile">Поделиться музыкальным файлом!</string>
+    <string name="playerActivity_EqualizerFeature_not_Supported">Функция эквалайзера не поддерживается!</string>
+    <string name="playerActivity_Ok">OK</string>
+    <string name="playerActivity_Stop_after_5minutes">Музыка остановится через 5 минут!</string>
+    <string name="playerActivity_Stop_after_15minutes">Музыка остановится через 15 минут!</string>
+    <string name="playerActivity_Stop_after_30minutes">Музыка остановится через 30 минут!</string>
+    <string name="playerActivity_Stop_after_1hour">Музыка остановится через 1 час!</string>
+    <string name="playerActivity_AudioBoost">Аудиоусиление</string>
+
+    <string name="bottomSheetLayoutOfLanguages_Application_language">Язык приложения</string>
+    <string name="bottomSheetLayoutOfLanguages_English">Английский</string>
+    <string name="bottomSheetLayoutOfLanguages_Turkish">Турецкий</string>
+    <string name="bottomSheetLayoutOfLanguages_French">Французский</string>
+    <string name="bottomSheetLayoutOfLanguages_German">Немецкий</string>
+    <string name="bottomSheetLayoutOfLanguages_Russian">Русский</string>
+    <string name="bottomSheetLayoutOfLanguages_Spanish">Испанский</string>
+
+    <string name="artistAdapter_songs">песни</string>
+
+    <string name="favouriteAdapter_Remove_from_playNext">Удалить из воспроизведения далее</string>
+    <string name="favouriteAdapter_Cant_remove_currently_playing_Song">Нельзя удалить текущую воспроизводимую песню.</string>
+
+    <string name="musicAdapter_Added_to_play_next">Добавлено в воспроизведение далее</string>
+    <string name="musicAdapter_Play_the_song_first">Сначала воспроизведите песню!</string>
+    <string name="musicAdapter_Delete_Song">Удалить песню</string>
+    <string name="musicAdapter_Are_youSure_you_want_to_deleteSong">Вы уверены, что хотите удалить эту песню?</string>
+    <string name="musicAdapter_Delete">Удалить</string>
+    <string name="musicAdapter_Song_deleted_from_your_device">Песня успешно удалена с вашего устройства.</string>
+    <string name="musicAdapter_Failed_to_deleteSong">Не удалось удалить песню.</string>
+    <string name="musicAdapter_Cancel">Отмена</string>
+
+    <string name="playlistAdapter_Do_you_want_to_delete_playlist">Вы хотите удалить этот плейлист?</string>
+    <string name="playlistAdapter_Yes">Да</string>
+    <string name="playlistAdapter_No">Нет</string>
+
+    <string name="ratingManager_Review_failed_to_start">Не удалось начать обзор</string>
+    <string name="ratingManager_Rating_is_completed">Рейтинг завершен.</string>
+
+</resources>

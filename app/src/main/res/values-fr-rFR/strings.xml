@@ -1,0 +1,219 @@
+<resources>
+    <string name="app_name">Music Player</string>
+    <string name="song_name">Nom de la chanson</string>
+    <string name="artist">Artiste</string>
+
+
+    <!-- Menu -->
+    <string name="settings">Paramètres</string>
+    <string name="search_view">Rechercher</string>
+    <string name="music">Musique</string>
+    <string name="favourite">Favoris</string>
+    <string name="library">Bibliothèque</string>
+
+    <!-- Play Next Activity -->
+    <string name="playNextActivity_toolBarTitle">Lire ensuite</string>
+    <string name="playNextActivity_playNextNote">Appuyez longuement sur n\'importe quelle chanson pour l\'ajouter à Lire ensuite.</string>
+
+    <!-- Playlist Details Activity -->
+    <!-- XML -->
+    <string name="playlistDetailsActivity_toolBarTitle">Listes de lecture</string>
+    <string name="playlistDetailsActivity_addSongBtn">Ajouter une chanson</string>
+    <string name="playlistDetailsActivity_removeAllBtn">Supprimer tout</string>
+    <!-- Kotlin -->
+    <string name="playlistDetailsActivity_Nosongsinplaylist">Aucune chanson dans la liste de lecture.</string>
+    <string name="playlistDetailsActivity_remove">Supprimer</string>
+    <string name="playlistDetailsActivity_Doyouwanttoremoveallsongsfromplaylist">Voulez-vous supprimer toutes les chansons de la liste de lecture ?</string>
+    <string name="playlistDetailsActivity_yes">Oui</string>
+    <string name="playlistDetailsActivity_no">Non</string>
+    <string name="playlistDetailsActivity_totalSongs">Total des chansons :</string>
+
+    <!-- Search Activity -->
+    <string name="searchActivity_searchSong">Rechercher une chanson</string>
+    <string name="searchActivity_searchOnYoutube">Rechercher des chansons sur YouTube</string>
+    <string name="searchActivity_EnterasongtosearchonYouTube">Entrez une chanson à rechercher sur YouTube !</string>
+
+    <!-- Selection Of Songs Activity -->
+    <string name="selectionOfSongsActivity_searchSong">Rechercher une chanson</string>
+
+    <!-- Settings Activity -->
+    <!-- XML -->
+    <string name="settingsActivity_toolBarTitle">Paramètres</string>
+    <string name="settingsActivity_Customize_your_theme">Personnalisez votre thème</string>
+    <string name="settingsActivity_App_language">Langue de l\'application</string>
+    <string name="settingsActivity_Rate_our_application">Évaluez notre application</string>
+    <string name="settingsActivity_Recommend_our_application">Recommandez notre application</string>
+    <string name="settingsActivity_Give_us_your_suggestions">Donnez-nous vos suggestions</string>
+    <string name="settingsActivity_Report_an_issue">Signalez un problème</string>
+    <string name="settingsActivity_Privacy_policy">Politique de confidentialité</string>
+    <string name="settingsActivity_Buy_me_a_Coffee">Offrez-moi un café</string>
+    <string name="settingsActivity_Developed_by">Développé par</string>
+    <string name="settingsActivity_Achraf_EL_MASOUDI">Achraf EL MASOUDI</string>
+    <string name="settingsActivity_version">Version : 1.0.0</string>
+    <!-- Kotlin -->
+    <string name="settingsActivity_recommendationMessage">Découvrez l\'application Music Player !\n\nVotre compagnon ultime pour une lecture de musique fluide. Avec son design épuré et ses fonctionnalités puissantes, profitez de vos morceaux préférés sans tracas.\nTéléchargez dès maintenant et élevez votre expérience musicale au niveau supérieur !</string>
+    <string name="settingsActivity_Share_Music_Player_via">Partager Music Player via</string>
+    <string name="settingsActivity_emailSubject_Suggestions">Music Player - Suggestions</string>
+    <string name="settingsActivity_emailMessage_Suggestions">Bonjour,\n\nJ\'ai quelques suggestions pour votre application :\n\n</string>
+    <string name="settingsActivity_emailSubject_ReportingIssue">Music Player - Signalement d\'un problème</string>
+    <string name="settingsActivity_emailMessage_ReportingIssue">Bonjour,\n\nJ\'ai rencontré le problème suivant avec votre application :\n\n</string>
+
+    <!-- Songs Of Artist Activity -->
+    <!-- XML -->
+    <string name="songsOfArtistActivity_Shuffle">Aléatoire</string>
+    <string name="songsOfArtistActivity_Play_next">Lire ensuite</string>
+    <!-- Kotlin -->
+    <string name="songsOfArtistActivity_totalSongs">Total des chansons :</string>
+    <string name="songsOfArtistActivity_Recently_Added">Ajoutées récemment</string>
+    <string name="songsOfArtistActivity_Song_Title">Titre de la chanson</string>
+    <string name="songsOfArtistActivity_File_Size">Taille du fichier</string>
+    <string name="songsOfArtistActivity_Sorting">Tri</string>
+    <string name="songsOfArtistActivity_OK">OK</string>
+    <string name="songsOfArtistActivity_Cancel">Annuler</string>
+    <string name="songsOfArtistActivity_Unknown">Inconnu</string>
+
+    <!-- Songs Of Folder Activity -->
+    <!-- XML -->
+    <string name="songsOfFolderActivity_Shuffle">Aléatoire</string>
+    <string name="songsOfFolderActivity_Play_next">Lire ensuite</string>
+    <!-- Kotlin -->
+    <string name="songsOfFolderActivity_totalSongs">Total des chansons :</string>
+    <string name="songsOfFolderActivity_Recently_Added">Ajoutées récemment</string>
+    <string name="songsOfFolderActivity_Song_Title">Titre de la chanson</string>
+    <string name="songsOfFolderActivity_File_Size">Taille du fichier</string>
+    <string name="songsOfFolderActivity_Sorting">Tri</string>
+    <string name="songsOfFolderActivity_OK">OK</string>
+    <string name="songsOfFolderActivity_Cancel">Annuler</string>
+    <string name="songsOfFolderActivity_Unknown">Inconnu</string>
+
+    <!-- Theme Customization Activity -->
+    <string name="themeCustomizationActivity_toolBarTitle">Thèmes</string>
+    <string name="themeCustomizationActivity_Set_favourite_theme">Définir votre thème favori</string>
+    <string name="themeCustomizationActivity_Apply_Btn">Appliquer</string>
+
+    <!-- Custom Alert Dialog Of Add Play list -->
+    <string name="customAlertDialogOfAddPlaylist_playListName">Nom de la playlist</string>
+    <string name="customAlertDialogOfAddPlaylist_cancel">Annuler</string>
+    <string name="customAlertDialogOfAddPlaylist_save">Enregistrer</string>
+
+    <!-- Bottom Sheet Layout Of More in Music Fragment -->
+    <string name="bottomSheetLayoutOfMore_inMusicFragment_playNext">Lire ensuite</string>
+    <string name="bottomSheetLayoutOfMore_inMusicFragment_aboutSong">À propos de la chanson</string>
+    <string name="bottomSheetLayoutOfMore_inMusicFragment_Delete_from_device">Supprimer de l\'appareil</string>
+
+    <!-- Bottom Sheet Layout Of More in Playlist -->
+    <string name="bottomSheetLayoutOfMore_inPlaylist_Delete_playlist">Supprimer la playlist</string>
+
+    <!-- Bottom Sheet Layout Of More in Player Activity -->
+    <string name="bottomSheetLayoutOfMore_inPlayerActivity_Share">Partager</string>
+    <string name="bottomSheetLayoutOfMore_inPlayerActivity_Equalizer">Égaliseur</string>
+    <string name="bottomSheetLayoutOfMore_inPlayerActivity_Booster">Amplificateur</string>
+
+    <!-- Bottom Sheet Layout Sleep Timer -->
+    <string name="bottomSheetLayoutSleepTimer_Stop_music_after">Arrêter la musique après</string>
+    <string name="bottomSheetLayoutSleepTimer_5minutes">5 minutes</string>
+    <string name="bottomSheetLayoutSleepTimer_15minutes">15 minutes</string>
+    <string name="bottomSheetLayoutSleepTimer_30_minutes">30 minutes</string>
+    <string name="bottomSheetLayoutSleepTimer_1_hour">1 heure</string>
+
+    <!-- Bottom Sheet Layout Of Song Details -->
+    <string name="bottomSheetLayoutOfSongDetails_Title">Titre</string>
+    <string name="bottomSheetLayoutOfSongDetails_Album">Album</string>
+    <string name="bottomSheetLayoutOfSongDetails_Artist">Artiste</string>
+    <string name="bottomSheetLayoutOfSongDetails_Duration">Durée</string>
+    <string name="bottomSheetLayoutOfSongDetails_Location">Emplacement</string>
+
+    <!-- Artists Fragment Of Music Fragment -->
+    <string name="artistsFragmentOfMusicFragment_totalArtists">Total des artistes :</string>
+    <string name="artistsFragmentOfMusicFragment_No_artists_found">Aucun artiste trouvé !</string>
+
+    <!-- Favourite Fragment -->
+    <string name="favouriteFragment_Favourite_is_empty">Favoris est vide</string>
+    <string name="favouriteFragment_Songs_you_add_to_favourite_will_appear_here.">Les chansons que vous ajoutez aux favoris apparaîtront ici.</string>
+
+    <!-- Folders Fragment Of Fragment Music -->
+    <string name="foldersFragmentOfFragmentMusic_totalFolders">Total des dossiers :</string>
+    <string name="foldersFragmentOfFragmentMusic_No_folders_found">Aucun dossier trouvé !</string>
+
+    <!-- Music Fragment -->
+    <string name="musicFragment_Songs">Chansons</string>
+    <string name="musicFragment_Folders">Dossiers</string>
+    <string name="musicFragment_Artists">Artistes</string>
+
+    <!-- Playlist Fragment -->
+    <string name="playlistFragment_No_playlists_found">Aucune playlist trouvée !</string>
+    <string name="playlistFragment_Tap">Appuyez sur</string>
+    <string name="playlistFragment_to_Start_Playlist_Journey">pour commencer votre voyage de playlist.</string>
+    <string name="playlistFragment_Please_enter_your_playlist_name">Veuillez entrer le nom de votre playlist.</string>
+    <string name="playlistFragment_Playlist_exist">Playlist existe déjà !</string>
+
+    <!-- Songs Fragment Of Music Fragment -->
+    <!-- XML -->
+    <string name="songsFragmentOfMusicFragment_Shuffle">Aléatoire</string>
+    <string name="songsFragmentOfMusicFragment_Play_next">Lire ensuite</string>
+    <!-- Kotlin -->
+    <string name="songsFragmentOfMusicFragment_totalSongs">Total des chansons :</string>
+    <string name="songsFragmentOfMusicFragment_Recently_Added">Ajoutées récemment</string>
+    <string name="songsFragmentOfMusicFragment_Song_Title">Titre de la chanson</string>
+    <string name="songsFragmentOfMusicFragment_File_Size">Taille du fichier</string>
+    <string name="songsFragmentOfMusicFragment_Sorting">Tri</string>
+    <string name="songsFragmentOfMusicFragment_OK">OK</string>
+    <string name="songsFragmentOfMusicFragment_Cancel">Annuler</string>
+    <string name="songsFragmentOfMusicFragment_Unknown">Inconnu</string>
+
+    <!-- Player Activity -->
+    <!-- XML -->
+    <string name="playerActivity_toolBarTitle">En cours de lecture</string>
+    <string name="playerActivity_songName">Nom de la chanson</string>
+    <string name="playerActivity_unknown">Inconnu</string>
+    <string name="playerActivity_timeStamp">00:00</string>
+    <!-- Kotlin -->
+    <string name="playerActivity_stopTimer">Arrêter la minuterie</string>
+    <string name="playerActivity_Doyou_want_tostop_timer">Voulez-vous arrêter la minuterie ?</string>
+    <string name="playerActivity_Yes">Oui</string>
+    <string name="playerActivity_No">Non</string>
+    <string name="playerActivity_SharingMusicFile">Partage du fichier musical !</string>
+    <string name="playerActivity_EqualizerFeature_not_Supported">La fonction d\'égaliseur n\'est pas prise en charge !</string>
+    <string name="playerActivity_Ok">OK</string>
+    <string name="playerActivity_Stop_after_5minutes">La musique s\'arrêtera après 5 minutes !</string>
+    <string name="playerActivity_Stop_after_15minutes">La musique s\'arrêtera après 15 minutes !</string>
+    <string name="playerActivity_Stop_after_30minutes">La musique s\'arrêtera après 30 minutes !</string>
+    <string name="playerActivity_Stop_after_1hour">La musique s\'arrêtera après 1 heure !</string>
+    <string name="playerActivity_AudioBoost">Amplification audio</string>
+
+    <!-- Bottom Sheet Layout Of Languages -->
+    <string name="bottomSheetLayoutOfLanguages_Application_language">Langue de l\'application</string>
+    <string name="bottomSheetLayoutOfLanguages_English">Anglais</string>
+    <string name="bottomSheetLayoutOfLanguages_Turkish">Turc</string>
+    <string name="bottomSheetLayoutOfLanguages_French">Français</string>
+    <string name="bottomSheetLayoutOfLanguages_German">Allemand</string>
+    <string name="bottomSheetLayoutOfLanguages_Russian">Russie</string>
+    <string name="bottomSheetLayoutOfLanguages_Spanish">Espagnol</string>
+
+    <!-- Artist Adapter -->
+    <string name="artistAdapter_songs">chansons</string>
+
+    <!-- Favourite Adapter -->
+    <string name="favouriteAdapter_Remove_from_playNext">Retirer de la lecture suivante</string>
+    <string name="favouriteAdapter_Cant_remove_currently_playing_Song">Impossible de supprimer la chanson en cours de lecture.</string>
+
+    <!-- Music Adapter -->
+    <string name="musicAdapter_Added_to_play_next">Ajouté à la lecture suivante</string>
+    <string name="musicAdapter_Play_the_song_first">Jouez d\'abord la chanson !</string>
+    <string name="musicAdapter_Delete_Song">Supprimer la chanson</string>
+    <string name="musicAdapter_Are_youSure_you_want_to_deleteSong">Êtes-vous sûr de vouloir supprimer cette chanson ?</string>
+    <string name="musicAdapter_Delete">Effacer</string>
+    <string name="musicAdapter_Song_deleted_from_your_device">Chanson supprimée de votre appareil avec succès.</string>
+    <string name="musicAdapter_Failed_to_deleteSong">Échec de la suppression de la chanson.</string>
+    <string name="musicAdapter_Cancel">Annuler</string>
+
+    <!-- Playlist Adapter -->
+    <string name="playlistAdapter_Do_you_want_to_delete_playlist">Voulez-vous supprimer cette playlist ?</string>
+    <string name="playlistAdapter_Yes">Oui</string>
+    <string name="playlistAdapter_No">Non</string>
+
+    <!-- Rating Manager -->
+    <string name="ratingManager_Review_failed_to_start">Échec du démarrage de l\'avis</string>
+    <string name="ratingManager_Rating_is_completed">L\'évaluation est terminée.</string>
+
+</resources>
