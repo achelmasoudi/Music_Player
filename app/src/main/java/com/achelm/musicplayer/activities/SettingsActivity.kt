@@ -68,7 +68,7 @@ class SettingsActivity : AppCompatActivity() {
         }
 
         customizeThemeBtn.setOnClickListener {
-            var intent = Intent(this , ThemeCustomizationActivity::class.java)
+            val intent = Intent(this , ThemeCustomizationActivity::class.java)
             startActivity(intent)
         }
 
@@ -180,10 +180,10 @@ class SettingsActivity : AppCompatActivity() {
 
     private fun appLanguageProcess() {
         appLanguageBtn.setOnClickListener {
-            var bottomSheetView: View = LayoutInflater.from(this).inflate( R.layout.bottom_sheet_layout_of_languages ,
+            val bottomSheetView: View = LayoutInflater.from(this).inflate( R.layout.bottom_sheet_layout_of_languages ,
                 findViewById(R.id.bottomSheetLayoutOfLanguages_container) )
 
-            var bottomSheetDialog: BottomSheetDialog = BottomSheetDialog(this, R.style.BottomSheetDialogTheme)
+            val bottomSheetDialog = BottomSheetDialog(this, R.style.BottomSheetDialogTheme)
 
             bottomSheetDialog.setContentView(bottomSheetView)
             bottomSheetDialog.show()
