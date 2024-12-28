@@ -163,7 +163,7 @@ class SettingsActivity : AppCompatActivity() {
 
     private fun buymeCoffeeProcess() {
         buymeCoffeeBtn.setOnClickListener {
-            val buyMeCoffeeUrl = "https://www.buymeacoffee.com/achelmasoudi"
+            val buyMeCoffeeUrl = "https://buymeacoffee.com/achelmasoudi1"
             val intent = Intent(Intent.ACTION_VIEW, Uri.parse(buyMeCoffeeUrl))
             startActivity(intent)
         }
