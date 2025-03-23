@@ -19,6 +19,7 @@ import android.os.Handler
 import android.os.IBinder
 import android.os.Looper
 import android.provider.MediaStore
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.ImageView
@@ -57,7 +58,6 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.lukelorusso.verticalseekbar.VerticalSeekBar
 import de.hdodenhof.circleimageview.CircleImageView
-
 
 class PlayerActivity : AppCompatActivity(), ServiceConnection, MediaPlayer.OnCompletionListener {
 
@@ -154,7 +154,7 @@ class PlayerActivity : AppCompatActivity(), ServiceConnection, MediaPlayer.OnCom
             musicListPA.add(getMusicDetails(intent.data!!))
 
             Glide.with(this)
-                .load(getImgArt(musicListPA[songPosition].path))
+                .load(getImgArt(this , musicListPA[songPosition].path))
                 .apply(RequestOptions().placeholder(R.drawable.music_icon_for_song).centerCrop())
                 .into(currentSongImage)
 
@@ -222,8 +222,8 @@ class PlayerActivity : AppCompatActivity(), ServiceConnection, MediaPlayer.OnCom
                     .setNegativeButton(resources.getString(R.string.playerActivity_No)){ dialog, _ ->
                         dialog.dismiss()
                     }
-                    val customDialog = builder.create()
-                    customDialog.show()
+                val customDialog = builder.create()
+                customDialog.show()
             }
         }
 
@@ -311,7 +311,7 @@ class PlayerActivity : AppCompatActivity(), ServiceConnection, MediaPlayer.OnCom
         songPosition = intent.getIntExtra("index", 0)
 
         when (intent.getStringExtra("class")) {
-            "NowPlaying" -> {
+            "NowPlaying" , "MusicService" -> {
                 setLayout()
 
                 if(isPlaying) {
@@ -421,11 +421,13 @@ class PlayerActivity : AppCompatActivity(), ServiceConnection, MediaPlayer.OnCom
         Handler(Looper.getMainLooper()).postDelayed(MusicService.runnable, 0)
     }
 
-    private fun createMediaPlayer(){
+    private fun createMediaPlayer() {
         try {
             if (musicService!!.mediaPlayer == null) musicService!!.mediaPlayer = MediaPlayer()
             musicService!!.mediaPlayer!!.reset()
-            musicService!!.mediaPlayer!!.setDataSource(musicListPA[songPosition].path)
+            val uri = Uri.parse(musicListPA[songPosition].audioUri)
+            Log.d("PlayerActivity", "Setting data source to audio URI: $uri")
+            musicService!!.mediaPlayer!!.setDataSource(this, uri)
             musicService!!.mediaPlayer!!.prepare()
             tvSeekBarStart.text = formatDuration(musicService!!.mediaPlayer!!.currentPosition.toLong())
             tvSeekBarEnd.text = formatDuration(musicService!!.mediaPlayer!!.duration.toLong())
@@ -436,9 +438,9 @@ class PlayerActivity : AppCompatActivity(), ServiceConnection, MediaPlayer.OnCom
             playMusic()
             loudnessEnhancer = LoudnessEnhancer(musicService!!.mediaPlayer!!.audioSessionId)
             loudnessEnhancer.enabled = true
-        }
-        catch (e: Exception) {
-            Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show()
+        } catch (e: Exception) {
+            Log.e("PlayerActivity", "Error creating media player for URI: ${musicListPA[songPosition].audioUri}", e)
+            Toast.makeText(this, "Error: ${e.message}", Toast.LENGTH_LONG).show()
         }
     }
 
@@ -589,7 +591,7 @@ class PlayerActivity : AppCompatActivity(), ServiceConnection, MediaPlayer.OnCom
             var unknown = resources.getString(R.string.playerActivity_unknown)
 
             return Music(id = unknown, title = path.toString(), album = unknown, artist = unknown, duration = duration,
-            artUri = unknown, path = path.toString())
+                artUri = unknown, path = path.toString())
         }
         finally {
             cursor?.close()

@@ -13,7 +13,6 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.viewpager2.widget.ViewPager2
-import com.achelm.musicplayer.LanguageManager
 import com.achelm.musicplayer.R
 import com.achelm.musicplayer.ViewPagerAdapter
 import com.achelm.musicplayer.activities.MainActivity
@@ -57,7 +56,7 @@ class MusicFragment : Fragment() {
     }
 
     private fun setTabLayoutWithViewPager() {
-        var fragmentManager: FragmentManager = activity?.supportFragmentManager!!
+        val fragmentManager: FragmentManager = activity?.supportFragmentManager!!
         viewPagerAdapter = ViewPagerAdapter(fragmentManager , activity?.lifecycle!!)
 
         viewPager2.adapter = viewPagerAdapter

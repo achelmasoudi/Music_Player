@@ -15,7 +15,6 @@ import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.achelm.musicplayer.LanguageManager
 import com.achelm.musicplayer.R
 import com.achelm.musicplayer.activities.MainActivity
 import com.achelm.musicplayer.adapters.ArtistAdapter

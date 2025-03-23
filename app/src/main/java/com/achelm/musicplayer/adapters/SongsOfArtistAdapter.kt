@@ -3,7 +3,6 @@ package com.achelm.musicplayer.adapters
 import android.app.Activity
 import android.content.ContentResolver
 import android.content.Intent
-import android.content.res.Configuration
 import android.net.Uri
 import android.provider.MediaStore
 import android.view.LayoutInflater

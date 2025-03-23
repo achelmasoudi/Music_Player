@@ -15,9 +15,6 @@ import com.achelm.musicplayer.R
 import com.achelm.musicplayer.activities.MainActivity
 import com.achelm.musicplayer.activities.SongsOfArtistActivity
 import com.achelm.musicplayer.models.Artist
-import com.bumptech.glide.Glide
-import com.bumptech.glide.load.engine.DiskCacheStrategy
-import com.bumptech.glide.request.RequestOptions
 
 class ArtistAdapter(var activity: Activity, private var artistList: ArrayList<Artist>) : RecyclerView.Adapter<ArtistAdapter.MyViewHolder>() {
 
@@ -56,7 +53,7 @@ class ArtistAdapter(var activity: Activity, private var artistList: ArrayList<Ar
         artistIcon.setImageDrawable(artistImg)
 
         imageBackG.setCardBackgroundColor(ContextCompat.getColor( activity ,  MainActivity.currentTheme_backGIcon[MainActivity.themeIndex] ))
-        
+
     }
 
 }

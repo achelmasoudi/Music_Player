@@ -222,8 +222,14 @@ class SongsOfArtistActivity : AppCompatActivity() {
                 val path = cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.DATA)) ?: resources.getString(R.string.songsOfArtistActivity_Unknown)
                 val duration = cursor.getLong(cursor.getColumnIndex(MediaStore.Audio.Media.DURATION))
                 val albumId = cursor.getLong(cursor.getColumnIndex(MediaStore.Audio.Media.ALBUM_ID)).toString()
-                val uri = Uri.parse("content://media/external/audio/albumart")
-                val artUri = Uri.withAppendedPath(uri, albumId).toString()
+
+                // ---- Change 1: Generate audio URI for playback ----
+                val audioUri = Uri.withAppendedPath(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, id).toString()
+
+                // ---- Change 2: Generate album art URI for artwork ----
+                val albumArtBaseUri = Uri.parse("content://media/external/audio/albumart")
+                val albumArtUri = Uri.withAppendedPath(albumArtBaseUri, albumId).toString()
+
 
                 val music = Music(
                     id = id,
@@ -232,7 +238,8 @@ class SongsOfArtistActivity : AppCompatActivity() {
                     artist = artist,
                     path = path,
                     duration = duration,
-                    artUri = artUri
+                    artUri = albumArtUri,
+                    audioUri = audioUri
                 )
 
                 val file = File(music.path)

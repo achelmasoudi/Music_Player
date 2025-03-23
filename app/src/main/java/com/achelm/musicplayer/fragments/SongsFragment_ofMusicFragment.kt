@@ -1,12 +1,15 @@
 package com.achelm.musicplayer.fragments
 
+import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Context.MODE_PRIVATE
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,7 +21,6 @@ import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.achelm.musicplayer.LanguageManager
 import com.achelm.musicplayer.R
 import com.achelm.musicplayer.activities.MainActivity
 import com.achelm.musicplayer.activities.PlayNextActivity
@@ -27,6 +29,10 @@ import com.achelm.musicplayer.adapters.MusicAdapter
 import com.achelm.musicplayer.models.Music
 import com.achelm.musicplayer.models.exitApplication
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import java.io.File
 
 class SongsFragment_ofMusicFragment : Fragment() {
@@ -38,6 +44,9 @@ class SongsFragment_ofMusicFragment : Fragment() {
         var sortOrder: Int = 0
         val sortingList = arrayOf(MediaStore.Audio.Media.DATE_ADDED + " DESC", MediaStore.Audio.Media.TITLE,
             MediaStore.Audio.Media.SIZE + " DESC")
+
+        // Add caching for music list
+        private var cachedMusicList: ArrayList<Music>? = null
     }
 
     private lateinit var fView: View
@@ -47,6 +56,8 @@ class SongsFragment_ofMusicFragment : Fragment() {
     private lateinit var playNextBtn: CardView
     private lateinit var totalSongs: TextView
     private lateinit var sortBtn: CardView
+
+    private var isAdapterInitialized = false // Flag to track initialization
 
     @RequiresApi(Build.VERSION_CODES.R)
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
@@ -62,7 +73,10 @@ class SongsFragment_ofMusicFragment : Fragment() {
         totalSongs = fView.findViewById(R.id.songsFragmentOfMusicFrag_totalSongsId)
         sortBtn = fView.findViewById(R.id.songsFragmentOfMusicFrag_sortBtnId)
 
-        initializeLayout()
+
+        // Move initialization to a separate async method
+        loadMusicAsync()
+//        initializeLayout()
 
         shuffleBtn.setOnClickListener {
             val intent = Intent(requireActivity(), PlayerActivity::class.java)
@@ -93,8 +107,8 @@ class SongsFragment_ofMusicFragment : Fragment() {
 
                     // Update the music list based on the selected sorting option
                     sortOrder = currentSort
-                    MusicListMA = getAllAudio()
-                    musicAdapter.updateMusicList(MusicListMA)
+
+                    loadMusicAsync()
                 }
                 .setSingleChoiceItems(menuList, currentSort){ _ , which ->
                     currentSort = which
@@ -109,34 +123,64 @@ class SongsFragment_ofMusicFragment : Fragment() {
         return fView
     }
 
+    // New method to load music asynchronously
     @RequiresApi(Build.VERSION_CODES.R)
+    private fun loadMusicAsync() {
+        // Use cached data if available
+        cachedMusicList?.let {
+            MusicListMA = it
+            updateUI()
+            return
+        }
+
+        // Fetch in background if no cache
+        CoroutineScope(Dispatchers.Main).launch {
+            if (requireActivity().checkSelfPermission(
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU)
+                        Manifest.permission.READ_MEDIA_AUDIO
+                    else
+                        Manifest.permission.READ_EXTERNAL_STORAGE
+                ) == PackageManager.PERMISSION_GRANTED
+            ) {
+                val musicList = withContext(Dispatchers.IO) {
+                    getAllAudio()
+                }
+                MusicListMA = musicList
+                cachedMusicList = ArrayList(musicList) // Cache the result
+                updateUI()
+            } else {
+                totalSongs.text = "Permission denied. Please grant storage permission."
+            }
+        }
+    }
+
+    // Extract UI update logic into a separate method
     @SuppressLint("SetTextI18n")
-    private fun initializeLayout(){
+    private fun updateUI() {
         search = false
-        val sortEditor = requireContext().getSharedPreferences("SORTING", MODE_PRIVATE)
-        sortOrder = sortEditor.getInt("sortOrder", 0)
+        if (!isAdapterInitialized) {
+            recyclerViewOfSongs.setHasFixedSize(true)
+            recyclerViewOfSongs.layoutManager = LinearLayoutManager(requireContext())
+            musicAdapter = MusicAdapter(requireActivity(), MusicListMA)
+            recyclerViewOfSongs.adapter = musicAdapter
+            isAdapterInitialized = true
 
-        MusicListMA = getAllAudio()
-
-        recyclerViewOfSongs.setHasFixedSize(true)
-        recyclerViewOfSongs.layoutManager = LinearLayoutManager(requireContext())
-        musicAdapter = MusicAdapter(requireActivity(), MusicListMA)
-        recyclerViewOfSongs.adapter = musicAdapter
-
-        // Animation for RecyclerView
-        val songListAnimFF = LayoutAnimationController(AnimationUtils.loadAnimation(requireContext(),R.anim.slide_up_anim))
-        songListAnimFF.delay = 0.2f
-        songListAnimFF.order = LayoutAnimationController.ORDER_NORMAL
-        recyclerViewOfSongs.layoutAnimation = songListAnimFF
-
-        totalSongs.text  = "${resources.getString(R.string.songsFragmentOfMusicFragment_totalSongs)} ${musicAdapter.itemCount}"
-
+            val songListAnimFF = LayoutAnimationController(
+                AnimationUtils.loadAnimation(requireContext(), R.anim.slide_up_anim)
+            )
+            songListAnimFF.delay = 0.2f
+            songListAnimFF.order = LayoutAnimationController.ORDER_NORMAL
+            recyclerViewOfSongs.layoutAnimation = songListAnimFF
+        } else {
+            musicAdapter.updateMusicList(MusicListMA)
+        }
+        totalSongs.text = "${resources.getString(R.string.songsFragmentOfMusicFragment_totalSongs)} ${musicAdapter.itemCount}"
     }
 
     @SuppressLint("Recycle", "Range")
     @RequiresApi(Build.VERSION_CODES.R)
     private fun getAllAudio(): ArrayList<Music> {
-
+        Log.d("SongsFragment", "getAllAudio started")
         val tempList = ArrayList<Music>()
 
         // Define the directories where WhatsApp audio files reside
@@ -188,8 +232,7 @@ class SongsFragment_ofMusicFragment : Fragment() {
             projection,
             selectionBuilder.toString(),
             selectionArgs,
-            sortingList[sortOrder],
-            null
+            sortingList[sortOrder]
         )
 
         if (cursor != null) {
@@ -202,8 +245,13 @@ class SongsFragment_ofMusicFragment : Fragment() {
                     val pathC = cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.DATA)) ?: resources.getString(R.string.songsFragmentOfMusicFragment_Unknown)
                     val durationC = cursor.getLong(cursor.getColumnIndex(MediaStore.Audio.Media.DURATION))
                     val albumIdC = cursor.getLong(cursor.getColumnIndex(MediaStore.Audio.Media.ALBUM_ID)).toString()
-                    val uri = Uri.parse("content://media/external/audio/albumart")
-                    val artUriC = Uri.withAppendedPath(uri, albumIdC).toString()
+
+                    // ---- Change 1: Generate audio URI for playback ----
+                    val audioUri = Uri.withAppendedPath(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, idC).toString()
+
+                    // ---- Change 2: Generate album art URI for artwork ----
+                    val albumArtBaseUri = Uri.parse("content://media/external/audio/albumart")
+                    val albumArtUri = Uri.withAppendedPath(albumArtBaseUri, albumIdC).toString()
 
                     val music = Music(
                         id = idC,
@@ -212,7 +260,8 @@ class SongsFragment_ofMusicFragment : Fragment() {
                         artist = artistC,
                         path = pathC,
                         duration = durationC,
-                        artUri = artUriC
+                        artUri = albumArtUri,
+                        audioUri = audioUri
                     )
 
                     val file = File(music.path)
@@ -240,15 +289,13 @@ class SongsFragment_ofMusicFragment : Fragment() {
         super.onResume()
         val sortEditor = requireContext().getSharedPreferences("SORTING", MODE_PRIVATE)
         val sortValue = sortEditor.getInt("sortOrder", 0)
-
-        if(sortOrder != sortValue){
+        if (sortOrder != sortValue) {
             sortOrder = sortValue
-            MusicListMA = getAllAudio()
-            musicAdapter.updateMusicList(MusicListMA)
+            // Use async loading in onResume
+            loadMusicAsync()
+        } else if (isAdapterInitialized) {
+            musicAdapter.notifyDataSetChanged()
         }
-
-        // Notify the adapter that the dataset has changed
-        musicAdapter.notifyDataSetChanged()
     }
 
 }

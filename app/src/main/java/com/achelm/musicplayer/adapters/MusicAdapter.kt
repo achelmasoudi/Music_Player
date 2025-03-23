@@ -3,7 +3,6 @@ package com.achelm.musicplayer.adapters
 import android.app.Activity
 import android.content.ContentResolver
 import android.content.Intent
-import android.content.res.Configuration
 import android.net.Uri
 import android.provider.MediaStore
 import android.view.LayoutInflater
@@ -235,7 +234,7 @@ class MusicAdapter(private val activity: Activity, private var musicList: ArrayL
 
     fun updateTheme(imageBackG: CardView , artUri: String , songImage: ImageView) {
         Glide.with(activity).load(artUri).apply(RequestOptions().diskCacheStrategy(DiskCacheStrategy.ALL)
-                .placeholder(MainActivity.currentTheme_musicIcon[MainActivity.themeIndex]).centerCrop()).into(songImage)
+            .placeholder(MainActivity.currentTheme_musicIcon[MainActivity.themeIndex]).centerCrop()).into(songImage)
 
         imageBackG.setCardBackgroundColor(ContextCompat.getColor( activity ,  MainActivity.currentTheme_backGIcon[MainActivity.themeIndex] ))
     }

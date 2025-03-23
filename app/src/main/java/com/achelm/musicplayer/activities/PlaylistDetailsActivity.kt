@@ -22,7 +22,6 @@ import com.bumptech.glide.request.RequestOptions
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.gson.GsonBuilder
 import com.achelm.musicplayer.models.checkPlaylist
-import com.bumptech.glide.load.engine.DiskCacheStrategy
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdSize
 import com.google.android.gms.ads.AdView
@@ -79,7 +78,7 @@ class PlaylistDetailsActivity : AppCompatActivity() {
 
         try{
             PlaylistFragment.musicPlaylist.ref[currentPlaylistPos].playlist =
-            checkPlaylist(playlist = PlaylistFragment.musicPlaylist.ref[currentPlaylistPos].playlist)
+                checkPlaylist(playlist = PlaylistFragment.musicPlaylist.ref[currentPlaylistPos].playlist)
         }
         catch(e: Exception){}
 

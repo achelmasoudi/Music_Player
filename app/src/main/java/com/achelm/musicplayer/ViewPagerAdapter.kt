@@ -13,17 +13,10 @@ class ViewPagerAdapter(var fragmentManager: FragmentManager, var lifecycle: Life
     override fun getItemCount(): Int = 3
 
     override fun createFragment(position: Int): Fragment {
-        if(position == 1) {
-            //the second TabItem
-            return FoldersFragment_ofMusicFragment()
+        return when (position) {
+            1 -> FoldersFragment_ofMusicFragment() // The second TabItem
+            2 -> ArtistsFragment_ofMusicFragment() // The third TabItem
+            else -> SongsFragment_ofMusicFragment() // The first TabItem
         }
-
-        if(position == 2) {
-            //the second TabItem
-            return ArtistsFragment_ofMusicFragment()
-        }
-
-        //the first TabItem
-        return SongsFragment_ofMusicFragment()
     }
 }

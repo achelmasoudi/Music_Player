@@ -2,20 +2,17 @@ package com.achelm.musicplayer.fragments
 
 import android.annotation.SuppressLint
 import android.content.Intent
-import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
-import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.Toolbar
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.achelm.musicplayer.LanguageManager
 import com.achelm.musicplayer.R
 import com.achelm.musicplayer.activities.MainActivity
 import com.achelm.musicplayer.activities.PlayerActivity
@@ -24,7 +21,6 @@ import com.achelm.musicplayer.activities.SettingsActivity
 import com.achelm.musicplayer.adapters.FavouriteAdapter
 import com.achelm.musicplayer.models.Music
 import com.achelm.musicplayer.models.checkPlaylist
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class FavouriteFragment : Fragment() {
 

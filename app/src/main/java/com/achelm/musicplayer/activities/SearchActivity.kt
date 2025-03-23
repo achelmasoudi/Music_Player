@@ -3,18 +3,12 @@ package com.achelm.musicplayer.activities
 import android.content.Intent
 import android.os.Bundle
 import android.widget.RelativeLayout
-import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.cardview.widget.CardView
-import androidx.core.content.ContextCompat
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.isVisible
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.achelm.musicplayer.ApplicationClass
 import com.achelm.musicplayer.ApplicationClass.Companion.AD_UNIT_ID
 import com.achelm.musicplayer.LanguageManager
 import com.achelm.musicplayer.R
@@ -73,12 +67,12 @@ class SearchActivity : AppCompatActivity() {
                 recyclerView.isVisible = newText!!.isNotBlank()
 
                 SongsFragment_ofMusicFragment.musicListSearch = ArrayList()
-                    val userInput = newText.lowercase()
-                    for (song in SongsFragment_ofMusicFragment.MusicListMA)
-                        if(song.title.lowercase().contains(userInput))
-                            SongsFragment_ofMusicFragment.musicListSearch.add(song)
-                    SongsFragment_ofMusicFragment.search = true
-                    adapter.updateMusicList(searchList = SongsFragment_ofMusicFragment.musicListSearch)
+                val userInput = newText.lowercase()
+                for (song in SongsFragment_ofMusicFragment.MusicListMA)
+                    if(song.title.lowercase().contains(userInput))
+                        SongsFragment_ofMusicFragment.musicListSearch.add(song)
+                SongsFragment_ofMusicFragment.search = true
+                adapter.updateMusicList(searchList = SongsFragment_ofMusicFragment.musicListSearch)
 
                 return true
             }

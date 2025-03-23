@@ -11,14 +11,14 @@ android {
         applicationId = "com.achelm.musicplayer"
         minSdk = 21
         targetSdk = 34
-        versionCode = 4
-        versionName = "1.4"
+        versionCode = 10
+        versionName = "1.0.10"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
-            release {
+        release {
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")

@@ -1,20 +1,14 @@
 package com.achelm.musicplayer.activities
 
 import android.Manifest
-import android.content.Intent
 import android.content.pm.PackageManager
 import android.content.res.ColorStateList
 import android.graphics.PorterDuff
 import android.graphics.drawable.Drawable
-import android.net.Uri
 import android.os.Build
 import android.os.Bundle
-import android.os.Environment
-import android.provider.Settings
-import android.util.Log
 import android.view.View
 import android.widget.Toast
-import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -34,6 +28,7 @@ import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.gson.GsonBuilder
 import com.google.gson.reflect.TypeToken
 
@@ -55,14 +50,14 @@ class MainActivity : AppCompatActivity() {
         val currentTheme_favouriteIcon = mutableListOf<Drawable?>()
 
         private const val STORAGE_PERMISSION_CODE = 100
-        private const val TAG = "PERMISSION_TAG"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Set language
+        // Set language (this will check device language on first launch or use saved preference)
         LanguageManager.loadLocale(this)
+
 
         val themeEditor = getSharedPreferences("THEMES", MODE_PRIVATE)
         themeIndex = themeEditor.getInt("themeIndex", 0)
@@ -113,85 +108,34 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun requestPermission() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            // Android is 11 (R) or Above
-            try {
-                Log.d(TAG , "RequestPermission: try")
-                val intent = Intent()
-                intent.action = Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION
-                val uri = Uri.fromParts("package" , this.packageName , null)
-                intent.data = uri
-                storageActivityResultLauncher.launch(intent)
-            }
-            catch (e: Exception) {
-                Log.e(TAG, "RequestPermission: " , e)
-                val intent = Intent()
-                intent.action = Settings.ACTION_MANAGE_ALL_FILES_ACCESS_PERMISSION
-                storageActivityResultLauncher.launch(intent)
-            }
-        }
-        else {
-            // Android is below 11 (R)
-            ActivityCompat.requestPermissions(this,
-                arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE , Manifest.permission.READ_EXTERNAL_STORAGE), STORAGE_PERMISSION_CODE)
-
-        }
-    }
-
-    private val storageActivityResultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {
-        Log.d(TAG , "StorageActivityResultLauncher: ")
-
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            // Android is 11 (R) or Above
-            if (Environment.isExternalStorageManager()) {
-                Log.d(TAG , "StorageActivityResultLauncher: ")
-                retrieveAndDisplaySongs()
-                loadFavouriteSongs()
-            }
-            else {
-                Log.d(TAG , "StorageActivityResultLauncher: ")
-                Toast.makeText(this, "Manage external storage permission is denied...", Toast.LENGTH_SHORT).show()
-            }
-        }
-        else {
-            // Android is below 11 (R)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            // Android 13+: Request READ_MEDIA_AUDIO
+            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.READ_MEDIA_AUDIO), STORAGE_PERMISSION_CODE)
+        } else {
+            // Android 12 and below: Request READ_EXTERNAL_STORAGE
+            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE), STORAGE_PERMISSION_CODE)
         }
     }
 
     private fun checkPermission(): Boolean {
-        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            // Android is 11 (R) or Above
-            Environment.isExternalStorageManager()
-        }
-        else {
-            // Android is below 11 (R)
-            val write = ContextCompat.checkSelfPermission(this , Manifest.permission.WRITE_EXTERNAL_STORAGE)
-            val read = ContextCompat.checkSelfPermission(this , Manifest.permission.READ_EXTERNAL_STORAGE)
-            write == PackageManager.PERMISSION_GRANTED && read == PackageManager.PERMISSION_GRANTED
+        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            // Android 13+: Check READ_MEDIA_AUDIO
+            ContextCompat.checkSelfPermission(this, Manifest.permission.READ_MEDIA_AUDIO) == PackageManager.PERMISSION_GRANTED
+        } else {
+            // Android 12 and below: Check READ_EXTERNAL_STORAGE
+            ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED
         }
     }
 
     override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
-
         if (requestCode == STORAGE_PERMISSION_CODE) {
-            if (grantResults.isNotEmpty()) {
-
-                val write = grantResults[0] == PackageManager.PERMISSION_GRANTED
-                val read = grantResults[1] == PackageManager.PERMISSION_GRANTED
-
-                if (write && read) {
-                    // External Storage Permission Granted
-                    Toast.makeText(this, "Permission Granted", Toast.LENGTH_SHORT).show()
-                    // Retrieve and display songs after permission is granted
-                    retrieveAndDisplaySongs()
-                    loadFavouriteSongs()
-                }
-                else {
-                    // External Storage Permission Denied
-                    Toast.makeText(this, "Manage external storage permission is denied...", Toast.LENGTH_SHORT).show()
-                }
-
+            if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                Toast.makeText(this, "Permission Granted", Toast.LENGTH_SHORT).show()
+                retrieveAndDisplaySongs()
+                loadFavouriteSongs()
+            } else {
+                Toast.makeText(this, "Audio permission denied. Please grant it to access music.", Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -336,6 +280,22 @@ class MainActivity : AppCompatActivity() {
 
         // Start loading the ad in the background.
         pAdView.loadAd(adRequest)
+    }
+
+    // ---- New: Override onBackPressed with confirmation dialog ----
+    override fun onBackPressed() {
+        MaterialAlertDialogBuilder(this)
+            .setTitle("Exit App")
+            .setMessage("Are you sure you want to exit the app?")
+            .setPositiveButton("Yes") { _, _ ->
+                super.onBackPressed() // Proceed with default back action (exit)
+                finish() // Ensure activity closes
+            }
+            .setNegativeButton("No") { dialog, _ ->
+                dialog.dismiss() // Just close the dialog, stay in app
+            }
+            .setCancelable(false) // Prevent dismissing by tapping outside
+            .show()
     }
 
     override fun onResume() {

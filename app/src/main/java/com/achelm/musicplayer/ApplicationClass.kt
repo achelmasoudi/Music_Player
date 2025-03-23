@@ -13,7 +13,7 @@ class ApplicationClass : Application() {
         const val PREVIOUS = "previous"
         const val EXIT = "exit"
 
-        const val AD_UNIT_ID = "ca-app-pub-3711142068844225/7524460087"
+        const val AD_UNIT_ID = "ca-app-pub-3940256099942544/6300978111" // Test Banner Ad Unit ID
     }
     override fun onCreate() {
         super.onCreate()

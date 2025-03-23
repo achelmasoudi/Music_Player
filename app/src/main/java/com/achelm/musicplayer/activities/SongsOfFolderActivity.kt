@@ -260,8 +260,13 @@ object MusicUtility  {
                 val pathC = cursor.getString(cursor.getColumnIndex(MediaStore.Audio.Media.DATA)) ?: context.resources.getString(R.string.songsOfFolderActivity_Unknown)
                 val durationC = cursor.getLong(cursor.getColumnIndex(MediaStore.Audio.Media.DURATION))
                 val albumIdC = cursor.getLong(cursor.getColumnIndex(MediaStore.Audio.Media.ALBUM_ID)).toString()
-                val uri = Uri.parse("content://media/external/audio/albumart")
-                val artUriC = Uri.withAppendedPath(uri, albumIdC).toString()
+
+                // ---- Change 1: Generate audio URI for playback ----
+                val audioUri = Uri.withAppendedPath(MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, idC).toString()
+
+                // ---- Change 2: Generate album art URI for artwork ----
+                val albumArtBaseUri = Uri.parse("content://media/external/audio/albumart")
+                val albumArtUri = Uri.withAppendedPath(albumArtBaseUri, albumIdC).toString()
 
                 // Check if the song path belongs to the specified folder
                 if (pathC.startsWith(folderPath)) {
@@ -274,7 +279,8 @@ object MusicUtility  {
                         artist = artistC,
                         path = pathC,
                         duration = durationC,
-                        artUri = artUriC
+                        artUri = albumArtUri,
+                        audioUri = audioUri
                     )
 
                     val file = File(music.path)

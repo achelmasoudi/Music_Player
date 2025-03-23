@@ -4,10 +4,8 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.cardview.widget.CardView
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.achelm.musicplayer.ApplicationClass
 import com.achelm.musicplayer.ApplicationClass.Companion.AD_UNIT_ID
 import com.achelm.musicplayer.LanguageManager
 import com.achelm.musicplayer.adapters.MusicAdapter

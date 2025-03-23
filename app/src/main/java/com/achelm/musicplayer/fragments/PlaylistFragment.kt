@@ -13,16 +13,13 @@ import android.view.ViewGroup
 import android.view.inputmethod.InputMethodManager
 import android.widget.ImageView
 import android.widget.LinearLayout
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.Toolbar
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.achelm.musicplayer.LanguageManager
 import com.achelm.musicplayer.models.MusicPlaylist
 import com.achelm.musicplayer.models.Playlist
 import com.achelm.musicplayer.adapters.PlaylistAdapter
@@ -30,7 +27,6 @@ import com.achelm.musicplayer.R
 import com.achelm.musicplayer.activities.MainActivity
 import com.achelm.musicplayer.activities.SearchActivity
 import com.achelm.musicplayer.activities.SettingsActivity
-import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputLayout
 import java.text.SimpleDateFormat
