@@ -38,4 +38,4 @@
 
 | <img src="https://github.com/user-attachments/assets/f3d12c1c-7da8-4184-ad68-9fd4a2f2d88a" width="250"/>| <img src="https://github.com/user-attachments/assets/1d121a2d-89f9-4f94-8218-9f8d7a48eee9" width="250"/> | <img src="https://github.com/user-attachments/assets/aa515af6-ae96-405c-859c-28c829b3764f" width="250"/> |
 | :-------------: | :-------------:  | :-------------:  |
-|     HD Music     |     Support Multiple Formats     |     Colorful Themes     |
+|     **HD Music**     |     **Support Multiple Formats**     |     **Colorful Themes**     |
