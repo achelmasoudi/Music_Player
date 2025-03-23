@@ -187,4 +187,10 @@
     <string name="ratingManager_Review_failed_to_start">Не удалось начать обзор</string>
     <string name="ratingManager_Rating_is_completed">Рейтинг завершен.</string>
 
+    <string name="exit">Выйти из приложения</string>
+    <string name="exit_message">Вы уверены, что хотите выйти из приложения?</string>
+    <string name="permission_granted">Разрешение предоставлено</string>
+    <string name="permission_not_granted">Доступ к аудио отклонён. Пожалуйста, разрешите его для воспроизведения музыки.</string>
+    <string name="permission_deniedPlease_grantStorage_permission">Доступ отклонён. Пожалуйста, разрешите доступ к хранилищу.</string>
+
 </resources>

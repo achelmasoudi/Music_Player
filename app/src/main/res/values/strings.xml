@@ -214,4 +214,11 @@
     <!-- Rating Manager -->
         <string name="ratingManager_Review_failed_to_start">Review failed to start</string>
         <string name="ratingManager_Rating_is_completed">Rating is completed.</string>
+
+
+    <string name="exit">Exit App</string>
+    <string name="exit_message">Are you sure you want to exit the app?</string>
+    <string name="permission_granted">Permission Granted</string>
+    <string name="permission_not_granted">Audio permission denied. Please grant it to access music.</string>
+    <string name="permission_deniedPlease_grantStorage_permission">Permission denied. Please grant storage permission.</string>
 </resources>

@@ -215,4 +215,10 @@
     <string name="ratingManager_Review_failed_to_start">La revisión no pudo comenzar</string>
     <string name="ratingManager_Rating_is_completed">La calificación se ha completado.</string>
 
+    <string name="exit">Salir de la aplicación</string>
+    <string name="exit_message">¿Estás seguro de que deseas salir de la aplicación?</string>
+    <string name="permission_granted">Permiso concedido</string>
+    <string name="permission_not_granted">Permiso de audio denegado. Concédelo para acceder a la música.</string>
+    <string name="permission_deniedPlease_grantStorage_permission">Permiso denegado. Por favor, concede el permiso de almacenamiento.</string>
+
 </resources>

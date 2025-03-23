@@ -216,4 +216,11 @@
     <!-- Rating Manager -->
     <string name="ratingManager_Review_failed_to_start">Değerlendirme başlatılamadı</string>
     <string name="ratingManager_Rating_is_completed">Değerlendirme tamamlandı.</string>
+
+    <string name="exit">Uygulamadan Çık</string>
+    <string name="exit_message">Uygulamadan çıkmak istediğinize emin misiniz?</string>
+    <string name="permission_granted">İzin Verildi</string>
+    <string name="permission_not_granted">Ses izni reddedildi. Müzik erişimi için lütfen izin verin.</string>
+    <string name="permission_deniedPlease_grantStorage_permission">İzin reddedildi. Lütfen depolama izni verin.</string>
+
 </resources>

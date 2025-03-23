@@ -131,11 +131,11 @@ class MainActivity : AppCompatActivity() {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults)
         if (requestCode == STORAGE_PERMISSION_CODE) {
             if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                Toast.makeText(this, "Permission Granted", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, resources.getString(R.string.permission_granted), Toast.LENGTH_SHORT).show()
                 retrieveAndDisplaySongs()
                 loadFavouriteSongs()
             } else {
-                Toast.makeText(this, "Audio permission denied. Please grant it to access music.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, resources.getString(R.string.permission_not_granted), Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -285,13 +285,13 @@ class MainActivity : AppCompatActivity() {
     // ---- New: Override onBackPressed with confirmation dialog ----
     override fun onBackPressed() {
         MaterialAlertDialogBuilder(this)
-            .setTitle("Exit App")
-            .setMessage("Are you sure you want to exit the app?")
-            .setPositiveButton("Yes") { _, _ ->
+            .setTitle(resources.getString(R.string.exit))
+            .setMessage(resources.getString(R.string.exit_message))
+            .setPositiveButton(resources.getString(R.string.playerActivity_Yes)) { _, _ ->
                 super.onBackPressed() // Proceed with default back action (exit)
                 finish() // Ensure activity closes
             }
-            .setNegativeButton("No") { dialog, _ ->
+            .setNegativeButton(resources.getString(R.string.playerActivity_No)) { dialog, _ ->
                 dialog.dismiss() // Just close the dialog, stay in app
             }
             .setCancelable(false) // Prevent dismissing by tapping outside

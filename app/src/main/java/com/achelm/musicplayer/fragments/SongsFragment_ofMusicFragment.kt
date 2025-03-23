@@ -149,7 +149,7 @@ class SongsFragment_ofMusicFragment : Fragment() {
                 cachedMusicList = ArrayList(musicList) // Cache the result
                 updateUI()
             } else {
-                totalSongs.text = "Permission denied. Please grant storage permission."
+                totalSongs.text = resources.getString(R.string.permission_deniedPlease_grantStorage_permission)
             }
         }
     }

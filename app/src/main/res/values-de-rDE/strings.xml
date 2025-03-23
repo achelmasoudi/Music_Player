@@ -188,4 +188,10 @@
     <string name="ratingManager_Review_failed_to_start">Überprüfung konnte nicht gestartet werden</string>
     <string name="ratingManager_Rating_is_completed">Bewertung abgeschlossen.</string>
 
+    <string name="exit">App beenden</string>
+    <string name="exit_message">Sind Sie sicher, dass Sie die App beenden möchten?</string>
+    <string name="permission_granted">Berechtigung erteilt</string>
+    <string name="permission_not_granted">Audio-Berechtigung verweigert. Bitte erteilen Sie die Erlaubnis, um Musik zu hören.</string>
+    <string name="permission_deniedPlease_grantStorage_permission">Berechtigung verweigert. Bitte erteilen Sie die Speicherberechtigung.</string>
+
 </resources>

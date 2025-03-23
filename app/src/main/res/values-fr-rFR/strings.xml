@@ -216,4 +216,10 @@
     <string name="ratingManager_Review_failed_to_start">Échec du démarrage de l\'avis</string>
     <string name="ratingManager_Rating_is_completed">L\'évaluation est terminée.</string>
 
+    <string name="exit">Quitter l\'application</string>
+    <string name="exit_message">Êtes-vous sûr de vouloir quitter l\'application ?</string>
+    <string name="permission_granted">Permission accordée</string>
+    <string name="permission_not_granted">Autorisation audio refusée. Veuillez l\'accorder pour accéder à la musique.</string>
+    <string name="permission_deniedPlease_grantStorage_permission">Autorisation refusée. Veuillez accorder l\'autorisation de stockage.</string>
+
 </resources>
