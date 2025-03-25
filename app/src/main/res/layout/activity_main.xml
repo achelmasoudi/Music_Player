@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_above="@+id/mainActivity_adViewId"
-        android:name="com.achelm.musicplayer.fragments.NowPlayingFragment"
+        android:name="com.achelm.offmusicplayer.fragments.NowPlayingFragment"
         tools:layout="@layout/fragment_now_playing" />
 
     <com.google.android.gms.ads.AdView

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.achelm.musicplayer">
+    package="com.achelm.offmusicplayer">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
@@ -11,7 +11,7 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
 
     <application
-        android:name="com.achelm.musicplayer.ApplicationClass"
+        android:name="com.achelm.offmusicplayer.ApplicationClass"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -22,39 +22,39 @@
         android:theme="@style/Base.Theme.MusicPlayer"
         tools:targetApi="31">
         <activity
-            android:name=".activities.ThemeCustomizationActivity"
+            android:name="com.achelm.offmusicplayer.activities.ThemeCustomizationActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.SettingsActivity"
+            android:name="com.achelm.offmusicplayer.activities.SettingsActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.SearchActivity"
+            android:name="com.achelm.offmusicplayer.activities.SearchActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.PlayNextActivity"
+            android:name="com.achelm.offmusicplayer.activities.PlayNextActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.SelectionOfSongsActivity"
+            android:name="com.achelm.offmusicplayer.activities.SelectionOfSongsActivity"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".activities.PlaylistDetailsActivity"
+            android:name="com.achelm.offmusicplayer.activities.PlaylistDetailsActivity"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".activities.SongsOfFolderActivity"
+            android:name="com.achelm.offmusicplayer.activities.SongsOfFolderActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.SongsOfArtistActivity"
+            android:name="com.achelm.offmusicplayer.activities.SongsOfArtistActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".activities.PlayerActivity"
+            android:name="com.achelm.offmusicplayer.activities.PlayerActivity"
             android:configChanges="uiMode"
             android:exported="true"
             android:launchMode="singleTask"
@@ -73,14 +73,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.MainActivity"
+            android:name="com.achelm.offmusicplayer.activities.MainActivity"
             android:configChanges="uiMode"
             android:exported="true"
             android:launchMode="singleTask"
             android:screenOrientation="portrait"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".activities.SplashScreenActivity"
+            android:name="com.achelm.offmusicplayer.activities.SplashScreenActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@style/TheSplashScreen_Style">
@@ -92,16 +92,16 @@
         <!-- AdMob -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713" /> <!-- Test App ID -->
+            android:value="ca-app-pub-3940256099942544~6300978111" /> <!-- Test ID -->
 
         <!-- Updated Permission for Android 14 -->
         <service
-            android:name=".MusicService"
+            android:name="com.achelm.offmusicplayer.MusicService"
             android:exported="false"
             android:foregroundServiceType="mediaPlayback" />
 
         <receiver
-            android:name=".NotificationReceiver"
+            android:name="com.achelm.offmusicplayer.NotificationReceiver"
             android:enabled="true" />
     </application>
 

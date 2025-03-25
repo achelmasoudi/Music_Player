@@ -4,15 +4,15 @@ plugins {
 }
 
 android {
-    namespace = "com.achelm.musicplayer"
+    namespace = "com.achelm.offmusicplayer"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.achelm.musicplayer"
+        applicationId = "com.achelm.offmusicplayer"
         minSdk = 21
         targetSdk = 34
-        versionCode = 10
-        versionName = "1.0.10"
+        versionCode = 1
+        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
