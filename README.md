@@ -2,14 +2,14 @@
       <h1> 
             <img src="https://github.com/user-attachments/assets/cfd233af-9026-4c5e-9102-74a2b70211c0" width="165px">
             <br/>
-            Offline Music Player 
+            Music Player 
             <br/> 
       </h1>
 </div>
 
    <br/> 
    
-🎵 **Offline Music Player** is a mobile application developed with Kotlin for Android, crafted to provide users with an exceptional offline music experience. The app empowers users to organize their favorite tracks, create personalized playlists, adjust sound with a built-in equalizer, and enjoy music anytime without the need for an internet connection. With its intuitive design and rich features, Offline Music Player ensures a seamless and enjoyable musical journey. Made with love ❤️ by [Achraf El masoudi](https://www.linkedin.com/in/achelmasoudi)
+🎵 **Music Player** is a mobile application developed with Kotlin for Android, crafted to provide users with an exceptional offline music experience. The app empowers users to organize their favorite tracks, create personalized playlists, adjust sound with a built-in equalizer, and enjoy music anytime without the need for an internet connection. With its intuitive design and rich features, Music Player ensures a seamless and enjoyable musical journey. Made with love ❤️ by [Achraf El masoudi](https://www.linkedin.com/in/achelmasoudi)
 
 <br/>
 
@@ -17,10 +17,10 @@
 
 <br/> 
 
-<h3>Offline Music Player - Your Melodic Universe 🎶✨</h3>
+<h3>Music Player - Your Melodic Universe 🎶✨</h3>
 
 #### 🎧 Unleash Your Music Universe:
-  - Dive into a symphony of features with Offline Music Player. Explore favorites, playlists, sleep timer, equalizer, and more — all within one harmonious app.
+  - Dive into a symphony of features with Music Player. Explore favorites, playlists, sleep timer, equalizer, and more — all within one harmonious app.
 
 #### 📁 Organize Your Melodies:
   - Curate your musical journey effortlessly. Arrange favorites, craft playlists, and set the perfect ambiance with the sleep timer — all at your fingertips.
@@ -32,7 +32,7 @@
   - Take charge of your musical voyage. Customize playlists, fine-tune settings, and set the stage for an unforgettable listening experience.
 
 #### 🚀 Soundtrack Your Moments:
-  - Let music accompany every moment of your journey. Whether it's a commute, workout, or relaxation session, Offline Music Player ensures your melodies are always within reach.
+  - Let music accompany every moment of your journey. Whether it's a commute, workout, or relaxation session, Music Player ensures your melodies are always within reach.
 
 <br/> 
 
