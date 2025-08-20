@@ -2,7 +2,7 @@
       <h1> 
             <img src="https://github.com/user-attachments/assets/cfd233af-9026-4c5e-9102-74a2b70211c0" width="165px">
             <br/>
-            Elms Player 
+            Elms Player – Music & Audio 
             <br/> 
       </h1>
 </div>
